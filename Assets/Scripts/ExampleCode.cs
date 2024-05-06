@@ -1,10 +1,12 @@
 using UnityEngine;
+using static Assets.Scripts.Utils.InstantiateUtils;
 using static Assets.Scripts.Utils.TweenUtils;
 using DG.Tweening;
 using System;
 using System.Collections.Generic;
 
-public class TweenExampleCode : MonoBehaviour
+
+public class ExampleCode : MonoBehaviour
 {
     [Header("Tween Settings"), SerializeField]
     private List<Tween> tweens;
@@ -34,6 +36,7 @@ public class TweenExampleCode : MonoBehaviour
 
     private void CallBackExample()
     {
+        Delay(1, () => InstantiatePrefab(gameObject, new Vector3(0, 0, 0), Quaternion.identity, null, "ExamplePrefab"));
         Debug.Log("Tween complete!");
     }
 }
