@@ -10,6 +10,7 @@ public class ExampleCode : MonoBehaviour
 {
     [Header("Tween Settings"), SerializeField]
     private List<Tween> tweens;
+    public Tween tween;
 
     private void Start()
     {

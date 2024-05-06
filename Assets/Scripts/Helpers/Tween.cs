@@ -33,6 +33,7 @@ public class Tween
     public LoopType loopType;
     public Transform targetTransform;
     public CanvasGroup canvasGroup;
+    public float targetAlpha;
     public float strength;
     public int vibrato;
     public float randomness;
@@ -138,7 +139,7 @@ public class TweenDrawer : PropertyDrawer
             case Tween.TweenType.Fade:
                 EditorGUI.PropertyField(position, property.FindPropertyRelative("canvasGroup"));
                 position.y += EditorGUIUtility.singleLineHeight * 1.1f;
-                EditorGUI.PropertyField(position, property.FindPropertyRelative("target"));
+                EditorGUI.PropertyField(position, property.FindPropertyRelative("targetAlpha"));
                 position.y += EditorGUIUtility.singleLineHeight * 1.1f;
                 EditorGUI.PropertyField(position, property.FindPropertyRelative("duration"));
                 position.y += EditorGUIUtility.singleLineHeight * 1.1f;
