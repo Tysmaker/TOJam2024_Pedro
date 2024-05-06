@@ -427,6 +427,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1569444569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569444570}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1569444570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569444569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.13, y: 3.5, z: 5.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1929990551
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,12 +490,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2132a12bb04a6a948b49651e3a0a4e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDestination: {x: 5, y: 5, z: 0}
-  moveDuration: 2
-  moveEase: 1
-  targetRotation: {x: 0, y: 0, z: 90}
-  rotateDuration: 8
-  rotateEase: 4
+  tweens:
+  - tweenType: 0
+    transform: {fileID: 1929990556}
+    target: {x: 5, y: 0, z: 0}
+    duration: 2
+    ease: 4
+    loops: 0
+    loopType: 0
+    targetTransform: {fileID: 0}
+    canvasGroup: {fileID: 0}
+    strength: 0
+    vibrato: 0
+    randomness: 0
+  - tweenType: 1
+    transform: {fileID: 1929990556}
+    target: {x: 0, y: 90, z: 0}
+    duration: 2
+    ease: 4
+    loops: 0
+    loopType: 0
+    targetTransform: {fileID: 0}
+    canvasGroup: {fileID: 0}
+    strength: 0
+    vibrato: 0
+    randomness: 0
+  - tweenType: 5
+    transform: {fileID: 1929990556}
+    target: {x: 0, y: 90, z: 0}
+    duration: 2
+    ease: 4
+    loops: 0
+    loopType: 0
+    targetTransform: {fileID: 0}
+    canvasGroup: {fileID: 0}
+    strength: 1
+    vibrato: 10
+    randomness: 50
 --- !u!65 &1929990553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -559,3 +621,4 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1929990556}
+  - {fileID: 1569444570}

@@ -7,15 +7,15 @@ namespace Assets.Scripts.Utils
     public static class TweenUtils
     {
         // Move to target position with duration and calls action when complete
-        public static void MoveTo(Transform transform, Vector3 targetPosition, float duration, Action onComplete = null, Ease ease = Ease.Linear)
+        public static void MoveTo(Transform transform, Vector3 targetPosition, float duration, Ease ease = Ease.Linear, int loops = 0, Action onComplete = null, LoopType loopType = LoopType.Restart)
         {
-            transform.DOMove(targetPosition, duration).SetEase(ease).OnComplete(() => onComplete?.Invoke());
+            transform.DOMove(targetPosition, duration).SetEase(ease).SetLoops(loops, loopType).OnComplete(() => onComplete?.Invoke()).SetId(transform);
         }
 
         // Rotate to target rotation with duration and calls action when complete
-        public static void RotateTo(Transform transform, Vector3 targetRotation, float duration, Action onComplete = null, Ease ease = Ease.Linear)
+        public static void RotateTo(Transform transform, Vector3 targetRotation, float duration, Ease ease = Ease.Linear, int loops = 0, LoopType loopType = LoopType.Restart, Action onComplete = null)
         {
-            transform.DORotate(targetRotation, duration).SetEase(ease).OnComplete(() => onComplete?.Invoke());
+            transform.DORotate(targetRotation, duration).SetEase(ease).SetLoops(loops, loopType).OnComplete(() => onComplete?.Invoke());
         }
 
         // Look at target with duration and calls action when complete
@@ -37,9 +37,9 @@ namespace Assets.Scripts.Utils
         }
 
         // Shake transform with strength, vibrato, randomness and duration
-        public static void Shake(Transform transform, float strength, int vibrato, float randomness, float duration, Action onComplete = null)
+        public static void Shake(Transform transform, float strength, int vibrato, float randomness, float duration, Action onComplete = null, Ease ease = Ease.Linear)
         {
-            transform.DOShakePosition(duration, strength, vibrato, randomness).OnComplete(() => onComplete?.Invoke());
+            transform.DOShakePosition(duration, strength, vibrato, randomness).SetEase(ease).OnComplete(() => onComplete?.Invoke());
         }
 
         // Delay for duration and calls action when complete

@@ -1,40 +1,36 @@
 using UnityEngine;
 using static Assets.Scripts.Utils.TweenUtils;
 using DG.Tweening;
+using System;
+using System.Collections.Generic;
 
 public class TweenExampleCode : MonoBehaviour
 {
-    [Header("Move Tween Settings"), SerializeField]
-    private Vector3 targetDestination = new Vector3(5, 0, 0);
-    [SerializeField]
-    private float moveDuration = 2f;
-    [SerializeField]
-    private Ease moveEase = Ease.Linear;
-
-    [Header("Rotate Tween Settings"), SerializeField]
-    private Vector3 targetRotation = new Vector3(0, 0, 90);
-    [SerializeField]
-    private float rotateDuration = 2f;
-    [SerializeField]
-    private Ease rotateEase = Ease.Linear;
+    [Header("Tween Settings"), SerializeField]
+    private List<Tween> tweens;
 
     private void Start()
     {
-        // Move the object to the target position in 2 seconds
-        Debug.Log("Tweening to target position");
-        Move();
+        TweenAll();
     }
 
-    private void Move()
+    void Update()
     {
-        MoveTo(transform, targetDestination, moveDuration, Rotate, moveEase);
+        // Press space to restart the tween
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DOTween.KillAll();
+        }
     }
-    private void Rotate()
+    private void TweenAll(int index = 0)
     {
-        RotateTo(transform, targetRotation, rotateDuration, CallBackExample, rotateEase);
+        if (index < tweens.Count)
+        {
+            tweens[index].DoTween(() => TweenAll(index + 1));
+            return;
+        }
+        CallBackExample();
     }
-
-    // Add more tween methods bellow here to test
 
     private void CallBackExample()
     {
