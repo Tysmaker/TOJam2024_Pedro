@@ -19,9 +19,9 @@ namespace Assets.Scripts.Utils
         }
 
         // Look at target with duration and calls action when complete
-        public static void LookAt(Transform transform, Transform target, float duration, Action onComplete = null, Ease ease = Ease.Linear)
+        public static void LookAt(Transform transform, Transform target, float duration, AxisConstraint axisConstraint = AxisConstraint.Y, Action onComplete = null, Ease ease = Ease.Linear)
         {
-            transform.DOLookAt(target.position, duration).SetEase(ease).OnComplete(() => onComplete?.Invoke());
+            transform.DOLookAt(target.position, duration, axisConstraint).SetEase(ease).OnComplete(() => onComplete?.Invoke());
         }
 
         // Scale to target scale with duration and calls action when complete
@@ -43,9 +43,9 @@ namespace Assets.Scripts.Utils
         }
 
         // Delay for duration and calls action when complete
-        public static void Delay(float duration, Action onComplete = null)
+        public static void Delay(float duration, Action onComplete = null, int loops = 0, LoopType loopType = LoopType.Restart)
         {
-            DOVirtual.DelayedCall(duration, () => onComplete?.Invoke());
+            DOVirtual.DelayedCall(duration, () => onComplete?.Invoke()).SetLoops(loops, loopType);
         }
     }
 }

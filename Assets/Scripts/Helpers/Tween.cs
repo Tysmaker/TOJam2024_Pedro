@@ -27,6 +27,7 @@ public class Tween
     public Transform transform;
     public Vector3 target;
     public float duration;
+    public AxisConstraint axisConstraint;
     public Ease ease;
     [Tooltip("-1 = infinite, 0 = no loops")]
     public int loops;
@@ -49,7 +50,7 @@ public class Tween
                 TweenUtils.RotateTo(transform, target, duration, ease, loops, loopType, onComplete);
                 break;
             case TweenType.LookAt:
-                TweenUtils.LookAt(transform, targetTransform, duration, onComplete, ease);
+                TweenUtils.LookAt(transform, targetTransform, duration, axisConstraint, onComplete, ease);
                 break;
             case TweenType.Scale:
                 TweenUtils.ScaleTo(transform, target, duration, onComplete, ease);
@@ -61,7 +62,7 @@ public class Tween
                 TweenUtils.Shake(transform, strength, vibrato, randomness, duration, onComplete);
                 break;
             case TweenType.Delay:
-                TweenUtils.Delay(duration, onComplete);
+                TweenUtils.Delay(duration, onComplete, loops, loopType);
                 break;
             default:
                 break;
@@ -84,7 +85,7 @@ public class TweenDrawer : PropertyDrawer
         position.y += EditorGUIUtility.singleLineHeight * 1.2f;
 
         EditorGUI.indentLevel++;
-        
+
 
         switch (tweenType)
         {
@@ -162,7 +163,11 @@ public class TweenDrawer : PropertyDrawer
                 break;
             case Tween.TweenType.Delay:
                 EditorGUI.PropertyField(position, property.FindPropertyRelative("duration"));
-                EditorGUILayout.Space(5);
+                position.y += EditorGUIUtility.singleLineHeight * 1.1f;
+                EditorGUI.PropertyField(position, property.FindPropertyRelative("loops"));
+                position.y += EditorGUIUtility.singleLineHeight * 1.1f;
+                EditorGUI.PropertyField(position, property.FindPropertyRelative("loopType"));
+                EditorGUILayout.Space(45);
                 break;
             default:
                 break;
