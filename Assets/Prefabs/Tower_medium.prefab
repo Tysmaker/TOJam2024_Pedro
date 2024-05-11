@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029663463755589423}
   - component: {fileID: 5484574017590143059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,6 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488146219858999429}
+  - component: {fileID: -6448414796532327111}
   m_Layer: 0
   m_Name: Tower_medium
   m_TagString: Untagged
@@ -85,6 +86,22 @@ Transform:
   - {fileID: 8056706563208304514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6448414796532327111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870136808186062676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebbd8784b5f06e488ea4247d423b3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: df8dd07dcd3e30e4daed395397a754ea, type: 2}
+  objectRenderer: {fileID: 4538738589399465738}
+  radius: 1
+  objectCollider: {fileID: 5484574017590143059}
 --- !u!1 &7195380406277561948
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +113,6 @@ GameObject:
   - component: {fileID: 5006911615442352764}
   - component: {fileID: 2185617292993886961}
   - component: {fileID: 4538738589399465738}
-  - component: {fileID: 2095725189480316373}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -169,27 +185,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2095725189480316373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7195380406277561948}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8329667267638664095
 GameObject:
   m_ObjectHideFlags: 0
