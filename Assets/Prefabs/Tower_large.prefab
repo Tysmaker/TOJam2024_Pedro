@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589120021662615282}
   - component: {fileID: 4421366007966931093}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df8dd07dcd3e30e4daed395397a754ea, type: 2}
+  - {fileID: 2100000, guid: 303c59068a6cd3143912c7d20d5f8c9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
