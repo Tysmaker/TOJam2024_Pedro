@@ -4,5 +4,8 @@ using UnityEngine;
 
 public interface IPerkable 
 {
-    void Execute();
+    string Name { get; }
+    string Description { get; }
+    int Cost { get; }
+    void Execute(TowerStats towerStats);
 }
