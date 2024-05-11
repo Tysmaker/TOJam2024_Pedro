@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AttackerStats : MonoBehaviour
 {
-    [SerializeField] private int health;
+    public int health;
     [SerializeField] private int armour;
-    [SerializeField] private float range;
+    public float attackRange;
+    public float detectionRange;
     [SerializeField] private float attackDamage;
     [SerializeField] private float attackSpeed;
     [SerializeField] private float cost;
