@@ -16,4 +16,8 @@ public class TowerPerksHandler : MonoBehaviour
             perk.Execute(towerStats);
         }
     }
+    public void AddPerk(IPerkable perk)
+    {
+        towerPerks.Add(perk);
+    }
 }

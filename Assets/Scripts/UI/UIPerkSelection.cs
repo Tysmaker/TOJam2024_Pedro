@@ -12,6 +12,8 @@ public class UIPerkSelection : MonoBehaviour
     [SerializeField]
     private int perkCount = 0;
 
+    private GameObject currentTower;
+
     // UI Elements
     [SerializeField] private GameObject perkButtonPrefab;
     [SerializeField] private Transform perkButtonContainer;
@@ -37,10 +39,18 @@ public class UIPerkSelection : MonoBehaviour
         {
             PlayerTowersManager.Init(anchor);
         }
+        currentTower = PlayerTowersManager.GetTower("Tower_large(Clone)");
     }
 
     private void Start()
     {
+        foreach (var tower in PlayerTowersManager.playerTowers)
+        {
+            if(tower.Key != currentTower.name)
+            {
+                tower.Value.gameObject.SetActive(false);
+            }
+        }
         CreateUI();
     }
 
@@ -58,12 +68,22 @@ public class UIPerkSelection : MonoBehaviour
 
     private void CreateUI()
     {
+        var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
         foreach (var perk in randomlyChosenPerks)
         {
             var perkButton = Instantiate(perkButtonPrefab, perkButtonContainer);
             var uiPerk = perkButton.GetComponent<UIPerk>();
             uiPerk.UpdateUI(perk.Name, perk.Description, perk.Cost);
+            uiPerk.SetButtonAction(() => AddPerk(perk));
         }
+    }
+
+    private void AddPerk(IPerkable perk)
+    {
+        var towerStats = currentTower.GetComponent<TowerStats>();
+        var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
+        towerPerksHandler.AddPerk(perk);
+        PlayerTowersManager.ApplyPerk(perk, towerStats);
     }
 
     private void UpdateUI()

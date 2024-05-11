@@ -6,7 +6,7 @@ using static Assets.Scripts.Utils.InstantiateUtils;
 
 public static class PlayerTowersManager
 {
-    private static Dictionary<string, TowerStats> playerTowers = new Dictionary<string, TowerStats>();
+    public static Dictionary<string, TowerStats> playerTowers {get; private set;} = new Dictionary<string, TowerStats>();
     public static bool IsInitialized { get; private set;} = false;
 
     public static void Init(Transform anchor)

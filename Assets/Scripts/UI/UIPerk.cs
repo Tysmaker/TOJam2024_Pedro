@@ -17,4 +17,9 @@ public class UIPerk : MonoBehaviour
         this.perkDescription.text = perkDescription;
         this.costText.text = cost.ToString() + " Added to tower";
     }
+
+    public void SetButtonAction(System.Action action)
+    {
+        selectButton.onClick.AddListener(() => action());
+    }
 }
