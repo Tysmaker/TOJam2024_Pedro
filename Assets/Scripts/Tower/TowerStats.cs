@@ -32,6 +32,10 @@ public class TowerStats : MonoBehaviour
     {
         this.priority += priority;
     }
+    public int GetPriority()
+    {
+        return priority;
+    }
 
     private void OnDrawGizmosSelected()
     {

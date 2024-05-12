@@ -22,6 +22,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     private AttackerStats attackerStats;
     private TowerStats towerStats;
     AttackerStates attackerStates;
+    private List<TowerStats> towersInRange = new List<TowerStats>();
 
     private void Awake()
     {
@@ -43,32 +44,44 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         CheckStates();
         CheckAttackRange();
-        CheckPlayerHealth();
+        CheckHealth();
     }
 
     //Just temporary when enemy collides with tower it destroyed the tower
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Tower"))
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Tower"))
+    //     {
+    //         Destroy(collision.gameObject);
+    //     }
+    // }
 
     void DetectTower()
     {
+        towersInRange.Clear();
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackerStats.detectionRange, towerLayer);
         foreach (var hitCollider in hitColliders)
         {
-            if(hitCollider)
+            if (hitCollider)
             {
-                tower = hitCollider.gameObject;
-                agent.destination = hitCollider.transform.position;
-
-
-               
+                var tower = hitCollider.GetComponent<TowerStats>();
+                //agent.destination = hitCollider.transform.position;
+                towersInRange.Add(tower);
             }
         }
+
+        if (towersInRange.Count > 0)
+        {
+            SortTowers();
+            tower = towersInRange[0].gameObject;
+        }
+
+        if (tower != null)
+        {
+            agent.destination = tower.transform.position;
+        }
+
 
         //Checking for is the tower is destroyed then moves back to the endZones Position
         if (tower.IsDestroyed())
@@ -77,10 +90,16 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         }
     }
 
+    private void SortTowers()
+    {
+        // Sort towers by priority
+        towersInRange.Sort((x, y) => x.GetPriority().CompareTo(y.GetPriority()));
+    }
+
 
     void CheckStates()
-    { 
-        switch(attackerStates)
+    {
+        switch (attackerStates)
         {
             case AttackerStates.Moving:
                 agent.isStopped = false;
@@ -88,29 +107,13 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 Debug.Log("Attacker Is Moving");
                 break;
             case AttackerStates.Attacking:
-
-                Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackerStats.AttackRange(), towerLayer);
-                {
-                    IDamageable damageable = hitColliders[0].gameObject.GetComponent<IDamageable>();
-
-                    if(damageable != null)
-                    {
-                        damageable.Damage();
-
-                        Debug.Log(damageable);
-                    }
-                }
                 agent.isStopped = true;
-                if(agent.isStopped)
-                {
-                    Debug.Log("Attacker Doing Dmg");
-                }
                 break;
             case AttackerStates.Dead:
                 agent.isStopped = true;
-                    Destroy(gameObject);
-                    Debug.Log("Attacker Is Dead");
-                        
+                Destroy(gameObject);
+                Debug.Log("Attacker Is Dead");
+
                 break;
         }
     }
@@ -140,11 +143,26 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         }
     }
 
-    void CheckPlayerHealth()
+    void CheckHealth()
     {
         if (attackerStats.GetHealth() <= 0)
         {
             attackerStates = AttackerStates.Dead;
+        }
+    }
+    private void AttackTower()
+    {
+        IDamageable damageable = tower.GetComponent<IDamageable>();
+
+        if (damageable != null)
+        {
+            damageable.Damage();
+
+            Debug.Log(damageable);
+        }
+        else
+        {
+            Debug.Log("No Damageable Interface Found");
         }
     }
 
@@ -159,6 +177,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         int damage = attackerStats.GetAttackDamage();
 
         towerStats.SetHealth(damage);
-      
+
     }
 }

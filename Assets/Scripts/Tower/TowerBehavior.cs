@@ -16,8 +16,14 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     private float radius;
     [SerializeField]
     private Collider objectCollider;
+    private TowerStats towerStats;
+    private AttackerStats attackerStats;
 
-        DontDestroyOnLoad(gameObject);        
+    public void SetPersistent()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -26,7 +32,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
 
     public void Damage()
     {
-        int damage = towerStats.GetAttackDamage();   
+        int damage = towerStats.GetAttackDamage();
 
         attackerStats.SetHealth(damage);
     }
