@@ -1,0 +1,4439 @@
+fileFormatVersion: 2
+guid: b813944dbe73d2b4e9b5e5b050b113c8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d02968415e2f80429bd7d60ecd65302
+      internalID: 706165648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f59c9d11d9eb8428928e3827e5f0a5
+      internalID: 2023420449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_2
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57ea6ef059956449a1a11c3cfbfe25b
+      internalID: -772924323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa2d894998c11a4d9cb5c798f729873
+      internalID: 1901061095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc8eec624d5c3344a59804306b79a8a
+      internalID: 405366279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10a23a4fca69a14e8b8206a449a62c6
+      internalID: 1707918415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 10098
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c31a17b37baf64b974a193f06be5af
+      internalID: 714101332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5646581589ae02d47b733a99c47796fd
+      internalID: -1462597146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_8
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5520ead186195b74cb85868cf7207b94
+      internalID: -1171454342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_9
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e0309fb499f254089f90030d10bdf4
+      internalID: -676118597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306150f7dd49a094694d4954f87c86ab
+      internalID: 1138763483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafb8da3f4a21174a983fec308dd3a38
+      internalID: 2009610579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db269d67b08d484f8019961976adda9
+      internalID: -1971658818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 9724
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4c606275afd4140b02679c5b246d5b
+      internalID: 1877515086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf12d59fd43b04548b9efad1abbf4792
+      internalID: -820593141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_15
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b5b3eff01e73048ad6cce2af69a6f8
+      internalID: -439000397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_16
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde0e4c750f350341b9066dbe9538f34
+      internalID: 1307201305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2132f4e1e8bd374ea35031122eb4550
+      internalID: -792496564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bd9f2be71b1024eae1c488ba67c364
+      internalID: 678489611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b7fc20665ffab4589ca6012c006a94
+      internalID: 1800543626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 9350
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7165e0abcfe0cad488172e5b51098869
+      internalID: 1733222802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7165add168fa2844a0a15399134141c
+      internalID: -766974251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_22
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f5c206bcf1d0246a517273b7108bd9
+      internalID: 2056484285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_23
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebcb215c2e7f2f47a137d0bfd626af9
+      internalID: -2049683809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ea82ff57b207e4a85697c1fd64d97a
+      internalID: -1609790098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bb2c67a243a4c41a9fd00936c07126
+      internalID: -1839666518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e47664cbdb49744c9b49fd78627b690
+      internalID: -916539385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_27
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 8976
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3b907248559fb439c098491486410d
+      internalID: 1792660275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9adff2a6664202409d72455c9e8d56f
+      internalID: 923974897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_29
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a396303344fc8458c4cf8be48fba14
+      internalID: 1824611129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_30
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a200a015c45122a46a9002fd28a007f9
+      internalID: -277835790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_31
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74a737adbdf1724ca8479b2b0b5c568
+      internalID: -924191847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abaaa4c0d3a17a94487b37e8159f3aeb
+      internalID: 1061384842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806f3516d1be89b40ae3e8826f865e54
+      internalID: -1543448341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_34
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 8602
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147905b6b2181eb40abb2e5a88ba27db
+      internalID: 646932798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27eca1f063ccf1e41930f707ee753e01
+      internalID: 1139484887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_36
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f85653f1a0b8df4fa01575052281147
+      internalID: -953607156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_37
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b5a346568b20449b24785cafc85898
+      internalID: 1264022538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479e6415bd530cb40bc40851a82e65cf
+      internalID: -468803539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2fd3dca5feeaa488f21842afdddcd1
+      internalID: -190387455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_40
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3508f1c87c410274ea83720f42930fdc
+      internalID: -1247634782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_41
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 8228
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ba2e910da491946869d855e5ba2d19
+      internalID: -1906459551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2cdc797bd9b3b459ad248f04972c41
+      internalID: 1351313972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_43
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b4b4c2906082b40ab999b66ff354e5
+      internalID: -79789402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_44
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57767c7be010ee4198c369a8aea7bfd
+      internalID: 1559344080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04596c79a7ae8554c8e21f52e7e7c84e
+      internalID: 306150936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f3148d5d5f2fe41bdda3efc0a9f0ad
+      internalID: 1134542306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e208cb52b0c4edc449bcb89244a4cc05
+      internalID: -1846502899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_48
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 7854
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3717acee2de934439169760d3cd03e6
+      internalID: -1209785787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7b7f78a753ffb4789d722c4ca2bdd8
+      internalID: 683024330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_50
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a701764fcfd48a44aeb65ca351f0e0b
+      internalID: 1327843680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_51
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca2740c05acf48438989c20f9d6e293
+      internalID: -247614141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_52
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129d4cb40fe85f845bfababd176c7192
+      internalID: -2133796883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_53
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e48e77e52fef4584d4dfeb0f5ab8b
+      internalID: 160117078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_54
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc14b57d28f10546b42732964b59298
+      internalID: 262649519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_55
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 7480
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e3a7b3f66a8664a9e0c969df907717
+      internalID: 1454465602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e8c41f6b34c394d994ed7990df3af4
+      internalID: 545814116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_57
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0446b12263f1cca46b2ee49873bf59a9
+      internalID: 480059551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_58
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933f3e54eaa9fd84cbf3352771e57f59
+      internalID: -1022678976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_59
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdea527ec63a6d46842adf4ef2a713f
+      internalID: -2136760859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_60
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8318be5127faa489b70c231cb0487b
+      internalID: -824031075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_61
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7138d3231efb514b9652ceb17d90e30
+      internalID: 2048634612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_62
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 7106
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb220c905c7af4b4a9f31d45ed21e1d2
+      internalID: 13281575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fbb1532529efa4094bbcd0493f89f3
+      internalID: -831972755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_64
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9a8512172f37d4694fd4bd234ed54e
+      internalID: 1535214901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_65
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f751f5235a6c844943ce957bf9fc70
+      internalID: 571366187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_66
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8809d21a794f444f9486d2bf050b3b8
+      internalID: 1862577031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa348cb192041f4fbe28cc336b68e66
+      internalID: 308140470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_68
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8105b7137431ca4f9a4941d41485230
+      internalID: 845025070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_69
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 6732
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1b8daec7918a34aacb162ef7f4946d
+      internalID: -531476877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de5fc4cb394aa148b61feeb8e3f1a6b
+      internalID: -737119172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_71
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec857c0c5f3ea146a60ced6c84d56ce
+      internalID: 1663506840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_72
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1831ea1d7707724aa532ee655361be3
+      internalID: -192783010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_73
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d3a0fad17704746a01ff51e76ce9ce
+      internalID: -92407798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_74
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63445cdcc5cb17d44b47b59f0e348b24
+      internalID: -1985980522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_75
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a8cf66df33602479d2ef982b7dad89
+      internalID: -405744744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_76
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 6358
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870541d5c3890684bb862423ff75b762
+      internalID: -1627588900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59d36c41a1a8bc459931096a6cc855d
+      internalID: 1082183549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_78
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08485048a39ac8148a325697070901a3
+      internalID: -444553630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_79
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a28bd31487a0934387ef5bcece3231c
+      internalID: 729828261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_80
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683a1e5bf53e2074d8d85379c961a226
+      internalID: -1785807220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_81
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c75937e9191eb4e9a98b006d7f0cd9
+      internalID: -43550313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_82
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06c84b259f18ab4a84e00ecd2befb57
+      internalID: 725934421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_83
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 5984
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212e54f168bf81b4683ce18ecbe15193
+      internalID: 999716622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e105daea450ea43bf6834244f33aa3
+      internalID: 1078714951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_85
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba490d5d58f18b40a38617482e3ff4e
+      internalID: -612596244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_86
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed68429c27757cb4c837e48002755201
+      internalID: 232813352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_87
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2df8469bd2d4eb438da017937ec1d83
+      internalID: 1662873288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_88
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950745684cd8a384d96b06833c5e74a8
+      internalID: -1451268269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_89
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f7aaf2ab5f5104086fecbd5ea7063d
+      internalID: 1909695744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_90
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 5610
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e185da9420c2dd429404e2765695321
+      internalID: 569242165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332097c09b679ed4e8bb3013872373f6
+      internalID: -1954622208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_92
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03402c6193797fd499e4bb60898f02ab
+      internalID: -468317660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_93
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e240f9de9964dc41b941c9b92f3bb90
+      internalID: 1871239562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_94
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d223c633ab022428d9432a79a32858
+      internalID: 1436625800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_95
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354cb3f0ef8c54949978b01713197264
+      internalID: -749490803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_96
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6145db9b374e235418a897e58eaa9543
+      internalID: 1509895424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_97
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 5236
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c04a772f86d6f4692b46e65e69875c
+      internalID: 1731401616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6f89844cf8a1a4ead42dbc6f4447b9
+      internalID: -1696138580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_99
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe3c844635a7fe4cb945f2e33cb263c
+      internalID: -1121923292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_100
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948566934cdf03a45b8782d838a63ebe
+      internalID: 1139602411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_101
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2680ebbc8e85d4b949d9278050237c
+      internalID: 113286265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_102
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2838da1b48842ea4e83d155f5c580e5a
+      internalID: -1390061395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_103
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7177f260d540cf44f94de97462e56536
+      internalID: -1080527413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_104
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 4862
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c320d42a27ccd40478f734233f6d3611
+      internalID: 1805755166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000822a697dbbbd47a3b92172a1ec7fa
+      internalID: 1124982712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_106
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c992c557042ef4e9aaf04c3de514e0
+      internalID: 812045611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_107
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5494c0064ab004f8a7ff7efe8e20e2
+      internalID: 1519107937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_108
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3845a1a1f209ac346bfdfb04cbd18cf8
+      internalID: 2003469818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_109
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c115ceebd9b7eb49bf251b5c8ca6543
+      internalID: 531151400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_110
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2223a886c2d1ee54ab0e413bc4ab820e
+      internalID: 688390296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_111
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 4488
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9e178d09638aa4682db81d410a5743
+      internalID: -394897230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8ecd11e5970934385ec4651f160b83
+      internalID: -156785925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_113
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e8dbef88ee05b4595be32a1a054e4a
+      internalID: 956382132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_114
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bea90d82f49224ca6d4c4efe0be6d0
+      internalID: 471038783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_115
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3918c253f2112e4998e4cbf0b089a6d
+      internalID: 832049332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_116
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9203af327766b4f83836cb4ebcd3b0
+      internalID: -1802255449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_117
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb6c4e6d186d1945a12b4d9dfe2a0c3
+      internalID: -951382720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_118
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 4114
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f2327fc767cf34789b023630e2c28d
+      internalID: 1690357759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcda86470a66894095a20fecc3a2543
+      internalID: -779589808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_120
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f02e38be5985843b3ad5075e75b4cd
+      internalID: -81052140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_121
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2336321ba7bcd314fa30d7d69d6e7a33
+      internalID: -530625462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_122
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756ed39051cf5eb408663e870db293a9
+      internalID: -1861868802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_123
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe7b7b63c232934bb88b9ad805e2fa3
+      internalID: -1975345665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_124
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f7b027537c69f4b980471286d3eecb
+      internalID: 628450495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_125
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 3740
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfcda1d44896364595e0f464ab38dcb
+      internalID: -128192900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e8774836fd96144a9d5d55f3510deb
+      internalID: 1229732564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_127
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbe73fea8a9f1247ada24a7190595a6
+      internalID: -32816434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_128
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a618c59158fcc647be33b378d4fe260
+      internalID: 1709087049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_129
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faca5846fcccf9449bdf9663adc61a1
+      internalID: 1665754523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_130
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809e6ac2c11661643930ff43923ce61e
+      internalID: 1098214306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_131
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8456218b955da7a45b5f383d85979ab6
+      internalID: 868600368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_132
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 3366
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91cc10fe7734b54186f28ee8efd06dd
+      internalID: 929528237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a1011ea8dc0fb4bacde5fcc7c45893
+      internalID: 1077246440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_134
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d75aaf04d68b5f49bb2a671fa1cc9fe
+      internalID: 21937134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_135
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ff0d6f7ad5f2940a5edfd168dd220e
+      internalID: 499981395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_136
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e7fe7ac7722174dac3f38f4cac3e41
+      internalID: 532476406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_137
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e853055d30e5134fbb9967242f5ff9d
+      internalID: -811764014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_138
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4aaea57e5b0c84db036c814508c74c
+      internalID: 1180524449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_139
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 2992
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c53358b1a7e6994a902343e2a34b08f
+      internalID: -676347824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bee0ae5e11da4547ba2bff2c02c46cc
+      internalID: 357443234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_141
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a56963c81386334b8e3149c843a3779
+      internalID: -576399824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_142
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cfaf507c5e94b42ac659cc3d0df656
+      internalID: -2049095328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_143
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80f24fcd45b73b4f8eb52175e2832cb
+      internalID: 162840981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_144
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54f470b4cf12b24aa0f9f1ad1255d4e
+      internalID: -513674259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_145
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f50fe8326e7b2419160fa2a1f89715
+      internalID: 1160331572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_146
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 2618
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a27f168ac8f20409ff62518596e693
+      internalID: 1309265739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_147
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60163836aafd29043bcea075f5a423fb
+      internalID: -813874140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_148
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b0946899131694e807b93545d56ed7
+      internalID: -538882653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_149
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f958dc4198fb7a74ead5ede0c033b358
+      internalID: 1332468928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_150
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c87132eaff388747b871694ab2babcd
+      internalID: 427151784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_151
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ed65c585bbf374fb9fe328ef695c5d
+      internalID: -1323539214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_152
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a587be12378d789448126e3972d6305b
+      internalID: 956955122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_153
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 2244
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a78b5897179574692299ea68099d22
+      internalID: 479135802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50b324a10c4cbe4090b1e0710af71df
+      internalID: -2129436742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_155
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606d4543df7df0b458870b08d3829c39
+      internalID: 160324823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_156
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bfe48b812114947b52d5eeaa40aab3
+      internalID: 155703749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_157
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deed6bfa891258f43bebdf0284a1d285
+      internalID: -359658658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_158
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b009b26c5645e11438cebae7b1c02f36
+      internalID: 1220333046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_159
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0762775e98469e488249c9e846a311c
+      internalID: 1692505634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_160
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 1870
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9355235dbb43a248b077a68a5cea1e2
+      internalID: 1277249089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_161
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08d4c74871bb524ab3ee98b61ad9592
+      internalID: 2068061310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_162
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e782f817adbea0a468ef952920d5394e
+      internalID: -721029760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_163
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35813ce896e69814d809871c3827167e
+      internalID: 6412876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_164
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0cac74c8dcdc4141b689da63be9c642
+      internalID: -210656465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_165
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc743b6360b62d4ba72ccedc94d68f8
+      internalID: 1111319925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_166
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14702af045c8ffe458021681898b1b75
+      internalID: 1223017816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_167
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 1496
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04916ab6f8224b043b7b6a18d8836ca4
+      internalID: 1641401469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d744eaf752f980c4e89fb54278c346e0
+      internalID: -884817955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_169
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362bcac842ae0cf41a20a40b371d37c7
+      internalID: 1438934109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_170
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e5db47d1b104b42a8616739df5bcb3
+      internalID: 576700696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_171
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0717096a88c473c4186fea0737335df1
+      internalID: -360962186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_172
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca72b5e4ff01ef45b152edf9254e793
+      internalID: 712076274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_173
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0cb70b77735a140945b0465de1550a
+      internalID: 583430475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_174
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 1122
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382920899c2ef684bb8c576ae2eea3a7
+      internalID: -801898905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fe02e058b7c014ab0ae86c4d54e2d1
+      internalID: -1894879768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_176
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ad9d21d1b48b0418f7eeac25af9531
+      internalID: -1682174650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_177
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14e52ce74393eb4b9b7188a59d729dc
+      internalID: 1349955852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_178
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b35742750f576f4ba528b246bb2f006
+      internalID: -724547726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_179
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4c783989f12f445817ef557bac9fe0
+      internalID: -2099290963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_180
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d44ddf87ea158d47a708d9ffb97441d
+      internalID: -242394145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_181
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 748
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159607eac80654e48b0f408cc02327e7
+      internalID: 383030573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f50282f86f2604fbe5f249e3a59fdc
+      internalID: 1717432774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_183
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e17a6a18b65fb4fb189385c4c8d949
+      internalID: 606357461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_184
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4780ff7d6302e5244a4f3abcceb50036
+      internalID: -1344807334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_185
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f7ce7f535660a48ba36d7363c2e797
+      internalID: 21755903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_186
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f5c512bd13c9e4bb8a32125628a8c5
+      internalID: -2042920688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_187
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069486188cb02b5409726f7d51c3199c
+      internalID: 1580573357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_188
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 374
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfb68cb79d9eb643879c09f1265a961
+      internalID: -2070232181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69e7ef1b6af67e4ca20518ddd234020
+      internalID: -51906516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_190
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba2289503f657349bd6c023f0c038e4
+      internalID: 331712320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_191
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27eaaf2bd3fe90644af0fd11fbdb9690
+      internalID: 70620124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_192
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0348a14c877e147a6ed26e6456814b
+      internalID: -259345120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_193
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef03a30097c9a746a9bc99bcb135563
+      internalID: 1870417955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_194
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7672f3a7ce6254aad49c4a3663fbce
+      internalID: 166935638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pedro_SpreadSheet_195
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 0
+        width: 374
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50af76514ec57364ca739f94c8270a01
+      internalID: 2096575589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f6974d23974c40c4a9bab4bda60d7627
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pedro_SpreadSheet_0: 706165648
+      Pedro_SpreadSheet_1: 2023420449
+      Pedro_SpreadSheet_10: 1138763483
+      Pedro_SpreadSheet_100: 1139602411
+      Pedro_SpreadSheet_101: 113286265
+      Pedro_SpreadSheet_102: -1390061395
+      Pedro_SpreadSheet_103: -1080527413
+      Pedro_SpreadSheet_104: 1805755166
+      Pedro_SpreadSheet_105: 1124982712
+      Pedro_SpreadSheet_106: 812045611
+      Pedro_SpreadSheet_107: 1519107937
+      Pedro_SpreadSheet_108: 2003469818
+      Pedro_SpreadSheet_109: 531151400
+      Pedro_SpreadSheet_11: 2009610579
+      Pedro_SpreadSheet_110: 688390296
+      Pedro_SpreadSheet_111: -394897230
+      Pedro_SpreadSheet_112: -156785925
+      Pedro_SpreadSheet_113: 956382132
+      Pedro_SpreadSheet_114: 471038783
+      Pedro_SpreadSheet_115: 832049332
+      Pedro_SpreadSheet_116: -1802255449
+      Pedro_SpreadSheet_117: -951382720
+      Pedro_SpreadSheet_118: 1690357759
+      Pedro_SpreadSheet_119: -779589808
+      Pedro_SpreadSheet_12: -1971658818
+      Pedro_SpreadSheet_120: -81052140
+      Pedro_SpreadSheet_121: -530625462
+      Pedro_SpreadSheet_122: -1861868802
+      Pedro_SpreadSheet_123: -1975345665
+      Pedro_SpreadSheet_124: 628450495
+      Pedro_SpreadSheet_125: -128192900
+      Pedro_SpreadSheet_126: 1229732564
+      Pedro_SpreadSheet_127: -32816434
+      Pedro_SpreadSheet_128: 1709087049
+      Pedro_SpreadSheet_129: 1665754523
+      Pedro_SpreadSheet_13: 1877515086
+      Pedro_SpreadSheet_130: 1098214306
+      Pedro_SpreadSheet_131: 868600368
+      Pedro_SpreadSheet_132: 929528237
+      Pedro_SpreadSheet_133: 1077246440
+      Pedro_SpreadSheet_134: 21937134
+      Pedro_SpreadSheet_135: 499981395
+      Pedro_SpreadSheet_136: 532476406
+      Pedro_SpreadSheet_137: -811764014
+      Pedro_SpreadSheet_138: 1180524449
+      Pedro_SpreadSheet_139: -676347824
+      Pedro_SpreadSheet_14: -820593141
+      Pedro_SpreadSheet_140: 357443234
+      Pedro_SpreadSheet_141: -576399824
+      Pedro_SpreadSheet_142: -2049095328
+      Pedro_SpreadSheet_143: 162840981
+      Pedro_SpreadSheet_144: -513674259
+      Pedro_SpreadSheet_145: 1160331572
+      Pedro_SpreadSheet_146: 1309265739
+      Pedro_SpreadSheet_147: -813874140
+      Pedro_SpreadSheet_148: -538882653
+      Pedro_SpreadSheet_149: 1332468928
+      Pedro_SpreadSheet_15: -439000397
+      Pedro_SpreadSheet_150: 427151784
+      Pedro_SpreadSheet_151: -1323539214
+      Pedro_SpreadSheet_152: 956955122
+      Pedro_SpreadSheet_153: 479135802
+      Pedro_SpreadSheet_154: -2129436742
+      Pedro_SpreadSheet_155: 160324823
+      Pedro_SpreadSheet_156: 155703749
+      Pedro_SpreadSheet_157: -359658658
+      Pedro_SpreadSheet_158: 1220333046
+      Pedro_SpreadSheet_159: 1692505634
+      Pedro_SpreadSheet_16: 1307201305
+      Pedro_SpreadSheet_160: 1277249089
+      Pedro_SpreadSheet_161: 2068061310
+      Pedro_SpreadSheet_162: -721029760
+      Pedro_SpreadSheet_163: 6412876
+      Pedro_SpreadSheet_164: -210656465
+      Pedro_SpreadSheet_165: 1111319925
+      Pedro_SpreadSheet_166: 1223017816
+      Pedro_SpreadSheet_167: 1641401469
+      Pedro_SpreadSheet_168: -884817955
+      Pedro_SpreadSheet_169: 1438934109
+      Pedro_SpreadSheet_17: -792496564
+      Pedro_SpreadSheet_170: 576700696
+      Pedro_SpreadSheet_171: -360962186
+      Pedro_SpreadSheet_172: 712076274
+      Pedro_SpreadSheet_173: 583430475
+      Pedro_SpreadSheet_174: -801898905
+      Pedro_SpreadSheet_175: -1894879768
+      Pedro_SpreadSheet_176: -1682174650
+      Pedro_SpreadSheet_177: 1349955852
+      Pedro_SpreadSheet_178: -724547726
+      Pedro_SpreadSheet_179: -2099290963
+      Pedro_SpreadSheet_18: 678489611
+      Pedro_SpreadSheet_180: -242394145
+      Pedro_SpreadSheet_181: 383030573
+      Pedro_SpreadSheet_182: 1717432774
+      Pedro_SpreadSheet_183: 606357461
+      Pedro_SpreadSheet_184: -1344807334
+      Pedro_SpreadSheet_185: 21755903
+      Pedro_SpreadSheet_186: -2042920688
+      Pedro_SpreadSheet_187: 1580573357
+      Pedro_SpreadSheet_188: -2070232181
+      Pedro_SpreadSheet_189: -51906516
+      Pedro_SpreadSheet_19: 1800543626
+      Pedro_SpreadSheet_190: 331712320
+      Pedro_SpreadSheet_191: 70620124
+      Pedro_SpreadSheet_192: -259345120
+      Pedro_SpreadSheet_193: 1870417955
+      Pedro_SpreadSheet_194: 166935638
+      Pedro_SpreadSheet_195: 2096575589
+      Pedro_SpreadSheet_2: -772924323
+      Pedro_SpreadSheet_20: 1733222802
+      Pedro_SpreadSheet_21: -766974251
+      Pedro_SpreadSheet_22: 2056484285
+      Pedro_SpreadSheet_23: -2049683809
+      Pedro_SpreadSheet_24: -1609790098
+      Pedro_SpreadSheet_25: -1839666518
+      Pedro_SpreadSheet_26: -916539385
+      Pedro_SpreadSheet_27: 1792660275
+      Pedro_SpreadSheet_28: 923974897
+      Pedro_SpreadSheet_29: 1824611129
+      Pedro_SpreadSheet_3: 1901061095
+      Pedro_SpreadSheet_30: -277835790
+      Pedro_SpreadSheet_31: -924191847
+      Pedro_SpreadSheet_32: 1061384842
+      Pedro_SpreadSheet_33: -1543448341
+      Pedro_SpreadSheet_34: 646932798
+      Pedro_SpreadSheet_35: 1139484887
+      Pedro_SpreadSheet_36: -953607156
+      Pedro_SpreadSheet_37: 1264022538
+      Pedro_SpreadSheet_38: -468803539
+      Pedro_SpreadSheet_39: -190387455
+      Pedro_SpreadSheet_4: 405366279
+      Pedro_SpreadSheet_40: -1247634782
+      Pedro_SpreadSheet_41: -1906459551
+      Pedro_SpreadSheet_42: 1351313972
+      Pedro_SpreadSheet_43: -79789402
+      Pedro_SpreadSheet_44: 1559344080
+      Pedro_SpreadSheet_45: 306150936
+      Pedro_SpreadSheet_46: 1134542306
+      Pedro_SpreadSheet_47: -1846502899
+      Pedro_SpreadSheet_48: -1209785787
+      Pedro_SpreadSheet_49: 683024330
+      Pedro_SpreadSheet_5: 1707918415
+      Pedro_SpreadSheet_50: 1327843680
+      Pedro_SpreadSheet_51: -247614141
+      Pedro_SpreadSheet_52: -2133796883
+      Pedro_SpreadSheet_53: 160117078
+      Pedro_SpreadSheet_54: 262649519
+      Pedro_SpreadSheet_55: 1454465602
+      Pedro_SpreadSheet_56: 545814116
+      Pedro_SpreadSheet_57: 480059551
+      Pedro_SpreadSheet_58: -1022678976
+      Pedro_SpreadSheet_59: -2136760859
+      Pedro_SpreadSheet_6: 714101332
+      Pedro_SpreadSheet_60: -824031075
+      Pedro_SpreadSheet_61: 2048634612
+      Pedro_SpreadSheet_62: 13281575
+      Pedro_SpreadSheet_63: -831972755
+      Pedro_SpreadSheet_64: 1535214901
+      Pedro_SpreadSheet_65: 571366187
+      Pedro_SpreadSheet_66: 1862577031
+      Pedro_SpreadSheet_67: 308140470
+      Pedro_SpreadSheet_68: 845025070
+      Pedro_SpreadSheet_69: -531476877
+      Pedro_SpreadSheet_7: -1462597146
+      Pedro_SpreadSheet_70: -737119172
+      Pedro_SpreadSheet_71: 1663506840
+      Pedro_SpreadSheet_72: -192783010
+      Pedro_SpreadSheet_73: -92407798
+      Pedro_SpreadSheet_74: -1985980522
+      Pedro_SpreadSheet_75: -405744744
+      Pedro_SpreadSheet_76: -1627588900
+      Pedro_SpreadSheet_77: 1082183549
+      Pedro_SpreadSheet_78: -444553630
+      Pedro_SpreadSheet_79: 729828261
+      Pedro_SpreadSheet_8: -1171454342
+      Pedro_SpreadSheet_80: -1785807220
+      Pedro_SpreadSheet_81: -43550313
+      Pedro_SpreadSheet_82: 725934421
+      Pedro_SpreadSheet_83: 999716622
+      Pedro_SpreadSheet_84: 1078714951
+      Pedro_SpreadSheet_85: -612596244
+      Pedro_SpreadSheet_86: 232813352
+      Pedro_SpreadSheet_87: 1662873288
+      Pedro_SpreadSheet_88: -1451268269
+      Pedro_SpreadSheet_89: 1909695744
+      Pedro_SpreadSheet_9: -676118597
+      Pedro_SpreadSheet_90: 569242165
+      Pedro_SpreadSheet_91: -1954622208
+      Pedro_SpreadSheet_92: -468317660
+      Pedro_SpreadSheet_93: 1871239562
+      Pedro_SpreadSheet_94: 1436625800
+      Pedro_SpreadSheet_95: -749490803
+      Pedro_SpreadSheet_96: 1509895424
+      Pedro_SpreadSheet_97: 1731401616
+      Pedro_SpreadSheet_98: -1696138580
+      Pedro_SpreadSheet_99: -1121923292
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
