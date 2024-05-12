@@ -184,7 +184,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 49.99998
+  field of view: 39.9999
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -311,7 +311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &424220583
 Transform:
   m_ObjectHideFlags: 0
@@ -340,7 +340,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 5580079269096356129, guid: 462d6de6310c19c4cb93549f64cf9f73, type: 3}
+  - {fileID: 175986, guid: cdc26bac7dd09f24082080f45f2cd4ba, type: 3}
+  - {fileID: 194614, guid: 7bb0e29cc0dfc1242a37465798c3e47b, type: 3}
+  - {fileID: 108508, guid: 1ae6e4e008749404d95ce29b596ce5e0, type: 3}
+  - {fileID: 137832, guid: 34a4099d5b5c6594b93436664baf1054, type: 3}
   spawnPoints:
   - {fileID: 424220583}
   spawnRate: 5
@@ -383,7 +386,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1800851868}
   m_Follow: {fileID: 1800851868}
   m_Lens:
-    FieldOfView: 49.99998
+    FieldOfView: 39.9999
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -470,8 +473,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.8153768, y: 1.2324085, z: 2.0906448}
+  m_Center: {x: -0.0021921273, y: 0.1162037, z: -0.67621315}
 --- !u!4 &573305272
 Transform:
   m_ObjectHideFlags: 0
@@ -987,7 +990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 0}
   objectRenderer: {fileID: 1515468463}
-  radius: 0
+  radius: 0.1
   objectCollider: {fileID: 1515468462}
 --- !u!1 &1586762897
 GameObject:
@@ -1014,7 +1017,7 @@ Transform:
   m_GameObject: {fileID: 1586762897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83, y: 1.61, z: 15.75}
+  m_LocalPosition: {x: -0.183, y: 0.38, z: -10.572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

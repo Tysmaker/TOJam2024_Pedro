@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static Assets.Scripts.Utils.TweenUtils;
 
 public class AttackerBehaviour : MonoBehaviour, IDamageable
 {
@@ -24,12 +25,14 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     AttackerStates attackerStates;
     [SerializeField]
     private List<TowerStats> towersInRange = new List<TowerStats>();
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         attackerStats = GetComponent<AttackerStats>();
+        animator = GetComponent<Animator>();    
     }
 
     // Start is called before the first frame update
@@ -102,10 +105,14 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         {
             case AttackerStates.Moving:
                 agent.isStopped = false;
+                animator.SetBool("isMoving", true);
                 Debug.Log("Attacker Is Moving");
                 break;
             case AttackerStates.Attacking:
                 agent.isStopped = true;
+                animator.SetBool("isMoving", false);
+                animator.SetTrigger("attack");
+
                 AttackTower();
                 break;
             case AttackerStates.Dead:
