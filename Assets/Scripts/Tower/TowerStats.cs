@@ -36,6 +36,14 @@ public class TowerStats : MonoBehaviour
     {
         return priority;
     }
+    public float GetCost()
+    {
+        return cost;
+    }
+    public void SetCost(float cost)
+    {
+        this.cost += cost;
+    }
 
     private void OnDrawGizmosSelected()
     {

@@ -19,6 +19,15 @@ public class UIPlaceObjectHandler : MonoBehaviour
     public void StartPlacingObject(int buttonTowerIndex)
     {
         prefabToPlace = PlayerTowersManager.GetTowerPrefab(buttonTowerIndex);
+
+        // Check if the player can afford the object
+        var costToPlace = prefabToPlace.GetComponent<TowerStats>().GetCost();
+        if (!ScenePlacingBehaviour.Instance.CanAfford(costToPlace))
+        {
+            Debug.Log("Not enough credits");
+            return;
+        }
+
         if (prefabToPlace == null)
         {
             Debug.LogError("UIPlaceObjectHandler: prefabToPlace is null");

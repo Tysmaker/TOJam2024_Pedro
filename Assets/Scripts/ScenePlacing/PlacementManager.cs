@@ -69,7 +69,7 @@ public class PlacementManager : MonoBehaviour
             {
                 return;
             }
-            
+
             OnPlace();
         }
 
@@ -123,6 +123,7 @@ public class PlacementManager : MonoBehaviour
 
     public void OnPlace()
     {
+        ScenePlacingBehaviour.Instance.RemoveCredits(objectInstance.GetComponent<TowerStats>().GetCost());
         placeable.ObjectCollider.gameObject.layer = LayerMask.NameToLayer("Tower");
         placeable.ObjectRenderer.sharedMaterial = placeable.DefaultMaterial;
         OnEnd();
@@ -137,13 +138,6 @@ public class PlacementManager : MonoBehaviour
         OnStartManaging?.Invoke();
     }
 
-
-    public void OnRemove(GameObject objectToRemove)
-    {
-        Destroy(objectToRemove);
-        Debug.Log("OnRemove");
-    }
-
     private void Removing()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -151,11 +145,29 @@ public class PlacementManager : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, towerLayer))
         {
             var hitObject = hit.collider.gameObject.transform.parent.gameObject;
+            while (hitObject.transform.parent != null)
+            {
+                hitObject = hitObject.transform.parent.gameObject;
+            }
+            Debug.Log(hitObject.name);
             if (hitObject != null)
             {
                 OnRemove(hitObject);
             }
         }
+    }
+
+    public void OnRemove(GameObject objectToRemove)
+    {
+        if (objectToRemove == null) 
+        {
+            Debug.LogError("Object to remove is null");
+            return;
+        }
+        var objectToRemoveStats = objectToRemove.GetComponent<TowerStats>().GetCost();
+        ScenePlacingBehaviour.Instance.AddCredits(objectToRemoveStats);
+        Destroy(objectToRemove);
+        Debug.Log("OnRemove");
     }
 
     public void OnCancel()
