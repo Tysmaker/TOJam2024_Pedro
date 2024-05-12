@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerBehavior : MonoBehaviour, IPlaceable
+public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
 {
     public Material DefaultMaterial { get => defaultMaterial; set => defaultMaterial = value; }
     public Renderer ObjectRenderer { get => objectRenderer; set => objectRenderer = value; }
@@ -17,9 +17,19 @@ public class TowerBehavior : MonoBehaviour, IPlaceable
     [SerializeField]
     private Collider objectCollider;
 
+    TowerStats towerStats;
+    AttackerStats attackerStats;
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
+    public void Damage()
+    {
+        int damage = towerStats.GetAttackDamage();   
+
+        attackerStats.SetHealth(damage);
     }
 }

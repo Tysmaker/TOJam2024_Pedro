@@ -13,7 +13,7 @@ public class ExampleTurret : MonoBehaviour
     private float attackRate = 1f;
     [SerializeField]
     private int damage = 10;
-
+        
     private readonly Collider[] _enemyColliders = new Collider[10];
     private List<ExampleEnemy> _orderedEnemiesInRange = new List<ExampleEnemy>();
     private ExampleEnemy enemyInRange;

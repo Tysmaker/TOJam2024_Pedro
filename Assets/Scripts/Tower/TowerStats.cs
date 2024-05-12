@@ -9,7 +9,7 @@ public class TowerStats : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int armour;
     [SerializeField] private float range;
-    [SerializeField] private float attackDamage;
+    [SerializeField] private int attackDamage;
     [SerializeField] private float attackSpeed;
     [SerializeField] private int priority;
     [SerializeField] private float cost;
@@ -56,6 +56,21 @@ public class TowerStats : MonoBehaviour
       
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    public int GetAttackDamage()
+    {
+        return attackDamage;
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    public void SetHealth(int value)
+    {
+        health -= value;
     }
 
 }

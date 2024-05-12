@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AttackerBehaviour : MonoBehaviour
+public class AttackerBehaviour : MonoBehaviour, IDamageable
 {
     public enum AttackerStates
     {
@@ -20,6 +20,7 @@ public class AttackerBehaviour : MonoBehaviour
     private Rigidbody rb;
     private GameObject tower;
     private AttackerStats attackerStats;
+    private TowerStats towerStats;
     AttackerStates attackerStates;
 
     private void Awake()
@@ -34,7 +35,7 @@ public class AttackerBehaviour : MonoBehaviour
     void Start()
     {
         attackerStates = AttackerStates.Moving;
-         agent.destination = endZone.transform.position;
+        agent.destination = endZone.transform.position;
     }
 
     // Update is called once per frame
@@ -63,6 +64,8 @@ public class AttackerBehaviour : MonoBehaviour
             {
                 tower = hitCollider.gameObject;
                 agent.destination = hitCollider.transform.position;
+
+
                
             }
         }
@@ -74,6 +77,7 @@ public class AttackerBehaviour : MonoBehaviour
         }
     }
 
+
     void CheckStates()
     { 
         switch(attackerStates)
@@ -84,6 +88,18 @@ public class AttackerBehaviour : MonoBehaviour
                 Debug.Log("Attacker Is Moving");
                 break;
             case AttackerStates.Attacking:
+
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackerStats.AttackRange(), towerLayer);
+                {
+                    IDamageable damageable = hitColliders[0].gameObject.GetComponent<IDamageable>();
+
+                    if(damageable != null)
+                    {
+                        damageable.Damage();
+
+                        Debug.Log(damageable);
+                    }
+                }
                 agent.isStopped = true;
                 if(agent.isStopped)
                 {
@@ -105,10 +121,11 @@ public class AttackerBehaviour : MonoBehaviour
         {
             float dist = Vector3.Distance(transform.position, tower.transform.position);
 
-            if (dist <= attackerStats.attackRange)
+            if (dist <= attackerStats.AttackRange())
             {
                 // Tower is within attack range
                 attackerStates = AttackerStates.Attacking;
+
             }
             else
             {
@@ -125,7 +142,7 @@ public class AttackerBehaviour : MonoBehaviour
 
     void CheckPlayerHealth()
     {
-        if (attackerStats.health <= 0)
+        if (attackerStats.GetHealth() <= 0)
         {
             attackerStates = AttackerStates.Dead;
         }
@@ -135,5 +152,13 @@ public class AttackerBehaviour : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackerStats.detectionRange);
+    }
+
+    public void Damage()
+    {
+        int damage = attackerStats.GetAttackDamage();
+
+        towerStats.SetHealth(damage);
+      
     }
 }
