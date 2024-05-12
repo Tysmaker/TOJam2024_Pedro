@@ -52,6 +52,9 @@ MonoBehaviour:
   objectRenderer: {fileID: 3625838711952030745}
   radius: 1.82
   objectCollider: {fileID: 4421366007966931093}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &4744381620740525911
 MonoBehaviour:
   m_ObjectHideFlags: 0

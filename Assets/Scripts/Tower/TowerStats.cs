@@ -62,9 +62,21 @@ public class TowerStats : MonoBehaviour
         return health;
     }
 
+    public float GetAttackRange()
+    {
+        return range;
+    }
+
+    public float GetAttackSpeed()
+    {
+        return attackSpeed;
+    }
+
     public void SetHealth(int value)
     {
         health -= value;
     }
+
+
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 404250}
   - component: {fileID: 3304904}
   - component: {fileID: 2349900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_WheelML
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8362534971602131484}
   - component: {fileID: -2574894006319709234}
   - component: {fileID: 3941094146126281884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 401908}
   - component: {fileID: 3354102}
   - component: {fileID: 2316170}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_WheelFR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 424538}
   - component: {fileID: 3311410}
   - component: {fileID: 2328856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_WheelBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 418438}
   - component: {fileID: 3360832}
   - component: {fileID: 2361230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 430510}
   - component: {fileID: 3340070}
   - component: {fileID: 2341624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_WheelMR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 406838}
   - component: {fileID: 3352070}
   - component: {fileID: 2386228}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 473190}
   - component: {fileID: 3381738}
   - component: {fileID: 2348664}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_WheelBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 465628}
   - component: {fileID: 3303182}
   - component: {fileID: 2385456}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Veh_Goblin_BatteringRam_WheelFL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

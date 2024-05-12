@@ -22,6 +22,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     private GameObject tower;
     private AttackerStats attackerStats;
     private TowerStats towerStats;
+    [SerializeField]
     AttackerStates attackerStates;
     [SerializeField]
     private List<TowerStats> towersInRange = new List<TowerStats>();
@@ -48,7 +49,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         CheckForTowers();
         CheckStates();
         CheckAttackRange();
-        CheckHealth();
     }
 
     //Just temporary when enemy collides with tower it destroyed the tower
@@ -69,9 +69,12 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         {
             if (hitCollider)
             {
-                var tower = hitCollider.GetComponent<TowerStats>();
+                var tower = hitCollider.GetComponentInParent<TowerStats>();
                 //agent.destination = hitCollider.transform.position;
-                towersInRange.Add(tower);
+                if (tower != null)
+                    towersInRange.Add(tower);
+                else
+                    Debug.Log("How could this happen to me");
             }
         }
 
@@ -117,9 +120,8 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 break;
             case AttackerStates.Dead:
                 agent.isStopped = true;
-                Destroy(gameObject);
                 Debug.Log("Attacker Is Dead");
-
+                Destroy(gameObject);
                 break;
         }
     }
@@ -149,13 +151,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         }
     }
 
-    void CheckHealth()
-    {
-        if (attackerStats.GetHealth() <= 0)
-        {
-            attackerStates = AttackerStates.Dead;
-        }
-    }
+   
     private void AttackTower()
     {
         if(tower == null)
@@ -187,6 +183,11 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     public void TakeDamage(int value)
     {
         attackerStats.SetHealth(value);
+
+        if (attackerStats.GetHealth() <= 0)
+        {
+            attackerStates = AttackerStates.Dead;
+        }
 
     }
 

@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Assets.Scripts.Utils.TweenUtils;
 
 public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
 {
@@ -17,11 +19,24 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     [SerializeField]
     private Collider objectCollider;
     private TowerStats towerStats;
-    private AttackerStats attackerStats;
+    //private AttackerStats attackerStats;
+
+    [SerializeField]
+    private LayerMask enemyLayer;
+
+
+    private readonly Collider[] _enemyColliders = new Collider[10];
+    private List<AttackerStats> _orderedEnemiesInRange = new List<AttackerStats>();
+    private AttackerStats enemyInRange;
 
     private void Awake()
     {
         towerStats = GetComponent<TowerStats>();
+    }
+
+    private void Start()
+    {
+        Delay(towerStats.GetAttackSpeed(), DamageEnemy, -1, LoopType.Restart);
     }
 
     public void SetPersistent()
@@ -44,4 +59,61 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
            Destroy(gameObject);
         }
     }
+
+    private void DamageEnemy()
+    {
+        if (enemyInRange == null) return;
+
+        var damageable = enemyInRange.GetComponent<IDamageable>();
+
+        // Damage enemyInRange
+        damageable.TakeDamage(towerStats.GetAttackDamage());
+
+    }
+
+    private void Update()
+    {
+        CheckForEnemiesInRange();
+
+        if (enemyInRange == null) return;
+        LookAt(transform, enemyInRange.transform, 0, ease: Ease.Linear);
+    }
+
+    private void CheckForEnemiesInRange()
+    {
+        _orderedEnemiesInRange.Clear();
+        enemyInRange = null;
+
+        int enemiesInRange = Physics.OverlapSphereNonAlloc(transform.position, towerStats.GetAttackRange(), _enemyColliders, enemyLayer);
+
+        if (enemiesInRange == 0) return;
+
+        foreach (var enemyCollider in _enemyColliders)
+        {
+            if (enemyCollider == null) continue;
+
+            var enemy = enemyCollider.GetComponent<AttackerStats>();
+            if (enemy == null) continue;
+
+            if (!_orderedEnemiesInRange.Contains(enemy))
+            {
+                _orderedEnemiesInRange.Add(enemy);
+            }
+        }
+        Debug.Log(_orderedEnemiesInRange.Count + " enemies in range");
+        OrderEnemiesInRange();
+    }
+
+    private void OrderEnemiesInRange()
+    {
+        if (_orderedEnemiesInRange == null || _orderedEnemiesInRange.Count == 0)
+        {
+            Debug.Log("No enemies in range");
+            return;
+        }
+
+        _orderedEnemiesInRange.Sort((enemy1, enemy2) => Vector3.Distance(transform.position, enemy1.transform.position).CompareTo(Vector3.Distance(transform.position, enemy2.transform.position)));
+        enemyInRange = _orderedEnemiesInRange[0];
+    }
+
 }

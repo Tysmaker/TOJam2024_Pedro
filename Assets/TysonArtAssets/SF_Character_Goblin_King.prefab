@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480254}
   - component: {fileID: 13725562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Elf_Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 424376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468268}
   - component: {fileID: 13761506}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478702}
   - component: {fileID: 13725670}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Undead_Rogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459080}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Forearm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403662}
   - component: {fileID: 13760178}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_TinMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 481176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447000}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toe_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436636}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shoulder_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404162}
   - component: {fileID: 13743856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Heavy_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425996}
   - component: {fileID: 13762438}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 434462}
   - component: {fileID: 13701766}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 433062}
   - component: {fileID: 13761104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Bard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Foot_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shoulder_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459862}
   - component: {fileID: 13709112}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Undead_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464792}
   - component: {fileID: 13739802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Bartender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,7 +1302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429026}
   - component: {fileID: 13787848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Undead_Footman_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406864}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Foot_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1441,7 +1441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454648}
   - component: {fileID: 13793556}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Characters_GoblinHunter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1548,7 +1548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488614}
   - component: {fileID: 13784670}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_GoblinWarrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473158}
   - component: {fileID: 13771296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Undead_Heavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,7 +1761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LowerLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428798}
   - component: {fileID: 13769576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Undead_Footman_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,7 +1900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hand_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1932,7 +1932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428258}
   - component: {fileID: 13713412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Executioner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2039,7 +2039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474860}
   - component: {fileID: 13729680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Princess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2145,7 +2145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 417752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Neck_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2178,7 +2178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461696}
   - component: {fileID: 13711136}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Heavy_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2285,7 +2285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452968}
   - component: {fileID: 13730402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Elf_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2392,7 +2392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402122}
   - component: {fileID: 13738342}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Templar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2498,7 +2498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434558}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chest_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,7 +2533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458274}
   - component: {fileID: 13779502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_GoblinWitchDoctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2639,7 +2639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: UpperLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2671,7 +2671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 454688}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2704,7 +2704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 414408}
   - component: {fileID: 13773400}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Hood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +2810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hand_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2841,7 +2841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456268}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hips_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2875,7 +2875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: UpperLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2908,7 +2908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472266}
   - component: {fileID: 13772904}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Jester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3015,7 +3015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465362}
   - component: {fileID: 13763290}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_GoblinKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3121,7 +3121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 453198}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spine_jnt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3154,7 +3154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467008}
   - component: {fileID: 13750870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_ShieldMaiden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3261,7 +3261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427292}
   - component: {fileID: 13701146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3368,7 +3368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475318}
   - component: {fileID: 13723904}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Elf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3475,7 +3475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435612}
   - component: {fileID: 13799948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Goblin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3582,7 +3582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400878}
   - component: {fileID: 13779034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3689,7 +3689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435636}
   - component: {fileID: 13792458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Gladiator_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3796,7 +3796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420556}
   - component: {fileID: 13741038}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3903,7 +3903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493600}
   - component: {fileID: 13777818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_PeasantMan_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4010,7 +4010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446140}
   - component: {fileID: 13730924}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_PeasantWoman_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4117,7 +4117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 415002}
   - component: {fileID: 13734484}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Knight_Gladiator_Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4224,7 +4224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429094}
   - component: {fileID: 13766354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_GoblinFemale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4330,7 +4330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441590}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spine_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4363,7 +4363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420042}
   - component: {fileID: 13722302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Doctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4470,7 +4470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493560}
   - component: {fileID: 13723506}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Elf_Female
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4582,7 +4582,7 @@ GameObject:
   - component: {fileID: 1301249623953530997}
   - component: {fileID: -5715600220122933006}
   - component: {fileID: 6491757974605138213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Goblin_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4782,7 +4782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 421734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Forearm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485866}
   - component: {fileID: 13713702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Undead_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4921,7 +4921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toe_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4953,7 +4953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495666}
   - component: {fileID: 13756724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SF_Character_Elf_Assassin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5059,7 +5059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 450948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LowerLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
