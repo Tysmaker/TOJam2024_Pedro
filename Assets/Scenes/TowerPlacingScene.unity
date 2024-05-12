@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 326683649}
   - component: {fileID: 326683648}
   - component: {fileID: 326683647}
+  - component: {fileID: 326683651}
   m_Layer: 5
   m_Name: Tower Panel
   m_TagString: Untagged
@@ -247,6 +248,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326683645}
   m_CullTransparentMesh: 1
+--- !u!225 &326683651
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326683645}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &366242059
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +979,7 @@ MonoBehaviour:
     type: 3}
   unplaceableLayer:
     serializedVersion: 2
-    m_Bits: 153
+    m_Bits: 187
   floorLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1064,7 +1077,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0

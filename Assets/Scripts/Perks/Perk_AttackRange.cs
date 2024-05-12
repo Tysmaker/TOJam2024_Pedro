@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Perk_AttackRange : MonoBehaviour, IPerkable
 {
+    public string Name => perkName;
+    public string Description => description;
+    public int Cost => cost;
 
     [SerializeField] private float attackRange;
     [SerializeField] private int cost;
-    public void Execute()
+    [SerializeField] private string perkName;
+    [SerializeField] private string description;
+    
+    public void Execute(TowerStats towerStats)
     {
-        var tower = GetComponent<TowerStats>();
-        tower.SetAttackRange(attackRange);
+        towerStats.SetAttackRange(attackRange);
     }
 }

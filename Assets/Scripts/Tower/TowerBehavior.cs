@@ -7,7 +7,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     public Material DefaultMaterial { get => defaultMaterial; set => defaultMaterial = value; }
     public Renderer ObjectRenderer { get => objectRenderer; set => objectRenderer = value; }
     public float ObjectRadius { get => radius; set => radius = value; }
-    public Collider ObjectCollider { get => objectCollider; set => objectCollider = value; }    
+    public Collider ObjectCollider { get => objectCollider; set => objectCollider = value; }
     [SerializeField]
     private Material defaultMaterial;
     [SerializeField]
@@ -17,9 +17,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     [SerializeField]
     private Collider objectCollider;
 
-    TowerStats towerStats;
-    AttackerStats attackerStats;
-
+        DontDestroyOnLoad(gameObject);        
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
