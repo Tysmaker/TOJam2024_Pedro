@@ -124,7 +124,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         {
             float dist = Vector3.Distance(transform.position, tower.transform.position);
 
-            if (dist <= attackerStats.AttackRange())
+            if (dist <= attackerStats.GetAttackRange())
             {
                 // Tower is within attack range
                 attackerStates = AttackerStates.Attacking;

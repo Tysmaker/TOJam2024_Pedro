@@ -10,7 +10,6 @@ public class AttackerStats : MonoBehaviour
     public float detectionRange;
     [SerializeField] private int attackDamage;
     [SerializeField] private float attackSpeed;
-    [SerializeField] private float cost;
     [SerializeField] private float coolDown;
 
 
@@ -24,7 +23,22 @@ public class AttackerStats : MonoBehaviour
         return health;
     }
 
-    public float AttackRange()
+    public int GetArmour()
+    {
+        return armour;
+    }
+
+    public float GetAttackSpeed()
+    {
+        return attackSpeed;
+    }
+
+    public float GetSpawnCoolDown()
+    {
+        return coolDown;
+    }    
+
+    public float GetAttackRange()
     {
         return attackRange;
     }
