@@ -29,7 +29,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
-        endZone = GameObject.FindGameObjectWithTag("EndZone");
         attackerStats = GetComponent<AttackerStats>();
     }
 
@@ -182,5 +181,10 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         attackerStats.SetHealth(value);
 
+    }
+
+    public void SetEndZone(GameObject endZone)
+    {
+        this.endZone = endZone;
     }
 }

@@ -72,6 +72,10 @@ public class WaveDefenderManager : MonoBehaviour
     {
         var attackerInstance = Instantiate(attacker, position, Quaternion.identity);
         var spawnCoolDown = attackerInstance.GetComponent<AttackerStats>().GetSpawnCoolDown();
+        var attackerBehavior = attackerInstance.GetComponent<AttackerBehaviour>();
+
+        attackerBehavior.SetEndZone(targetArea.gameObject);
+
         
         Delay(spawnCoolDown, () =>
         {
