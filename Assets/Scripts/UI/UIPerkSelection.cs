@@ -14,6 +14,8 @@ public class UIPerkSelection : MonoBehaviour
 
     private GameObject currentTower;
 
+    private bool isSelectiongPerks = false;
+
     // UI Elements
     [SerializeField] private GameObject perkButtonPrefab;
     [SerializeField] private Transform perkButtonContainer;
@@ -39,19 +41,40 @@ public class UIPerkSelection : MonoBehaviour
         {
             PlayerTowersManager.Init(anchor);
         }
-        currentTower = PlayerTowersManager.GetTower("Tower_large(Clone)");
     }
 
     private void Start()
     {
         foreach (var tower in PlayerTowersManager.playerTowers)
         {
-            if(tower.Key != currentTower.name)
+            StartCoroutine(WaitForPerkSelection(tower.Value.gameObject, tower.Key));
+        }
+    }
+
+    private IEnumerator WaitForPerkSelection(GameObject tower, string towerName)
+    {
+
+        while (isSelectiongPerks)
+        {
+            yield return null;
+        }
+        UpdateUI();
+        currentTower = tower;
+        currentTower.name = towerName;
+        foreach (var t in PlayerTowersManager.playerTowers)
+        {
+            if (t.Key != currentTower.name)
             {
-                tower.Value.gameObject.SetActive(false);
+                t.Value.gameObject.SetActive(false);
+            }
+            else
+            {
+                t.Value.gameObject.SetActive(true);
             }
         }
         CreateUI();
+        isSelectiongPerks = true;
+        Debug.Log("Perks Selected");
     }
 
     private IPerkable[] GetRandomPerks()
@@ -84,6 +107,16 @@ public class UIPerkSelection : MonoBehaviour
         var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
         towerPerksHandler.AddPerk(perk);
         PlayerTowersManager.ApplyPerk(perk, towerStats);
+        PerkSelected();
+    }
+
+    private void PerkSelected()
+    {
+        isSelectiongPerks = false;
+        foreach (Transform child in perkButtonContainer)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     private void UpdateUI()

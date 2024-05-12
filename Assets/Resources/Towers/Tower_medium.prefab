@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 488146219858999429}
   - component: {fileID: -6448414796532327111}
   - component: {fileID: -8267770811506275096}
+  - component: {fileID: -7180139127597677631}
   m_Layer: 0
   m_Name: Tower_medium
   m_TagString: Untagged
@@ -123,6 +124,18 @@ MonoBehaviour:
   priority: 0
   cost: 25
   coolDown: 1
+--- !u!114 &-7180139127597677631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870136808186062676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c601dbba0a93f44aaf63e007128049c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7195380406277561948
 GameObject:
   m_ObjectHideFlags: 0
