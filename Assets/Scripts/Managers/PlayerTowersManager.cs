@@ -48,4 +48,13 @@ public static class PlayerTowersManager
         if (!playerTowers.ContainsKey(towerName)) return null;
         return playerTowers[towerName].gameObject;
     }
+    public static GameObject GetTowerPrefab(int index)
+    {
+        foreach (var tower in playerTowers)
+        {
+            if (index == 0) return tower.Value.gameObject;
+            index--;
+        }
+        return null;
+    }
 }

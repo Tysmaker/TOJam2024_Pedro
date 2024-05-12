@@ -734,7 +734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1365407957
 AudioListener:
   m_ObjectHideFlags: 0
@@ -902,7 +902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchor: {fileID: 1102648031}
-  perkCount: 0
   perkButtonPrefab: {fileID: 1591118645466888271, guid: 2190dcadbb3181240ae4641ee13d6519,
     type: 3}
   perkButtonContainer: {fileID: 335874372}

@@ -1,8 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static Assets.Scripts.Utils.InstantiateUtils;
 
 public class PlacementManager : MonoBehaviour
 {
@@ -90,8 +89,9 @@ public class PlacementManager : MonoBehaviour
     public void AssignObject(GameObject objectToAssign)
     {
         objectToPlace = objectToAssign;
-        objectInstance = Instantiate(objectToPlace);
+        objectInstance = InstantiatePrefab(objectToPlace, Vector3.zero, name: objectToPlace.name.Replace("(Clone)", ""));
         placeable = objectInstance.GetComponent<IPlaceable>();
+        objectInstance.SetActive(true);
     }
 
     public void OnPreview()
