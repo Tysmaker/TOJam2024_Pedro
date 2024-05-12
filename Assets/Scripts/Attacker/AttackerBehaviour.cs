@@ -22,6 +22,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     private AttackerStats attackerStats;
     private TowerStats towerStats;
     AttackerStates attackerStates;
+    [SerializeField]
     private List<TowerStats> towersInRange = new List<TowerStats>();
 
     private void Awake()
@@ -42,6 +43,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
+        CheckForTowers();
         CheckStates();
         CheckAttackRange();
         CheckHealth();
@@ -56,7 +58,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     //     }
     // }
 
-    void DetectTower()
+    void CheckForTowers()
     {
         towersInRange.Clear();
 
@@ -101,7 +103,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         {
             case AttackerStates.Moving:
                 agent.isStopped = false;
-                DetectTower();
                 Debug.Log("Attacker Is Moving");
                 break;
             case AttackerStates.Attacking:
@@ -151,7 +152,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     }
     private void AttackTower()
     {
-        if(tower != null)
+        if(tower == null)
         {
             print("Tower Missing");
             return;
