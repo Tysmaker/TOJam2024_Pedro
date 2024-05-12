@@ -21,6 +21,12 @@ public class WaveDefenderManager : MonoBehaviour
     private bool isWaveComplete = false;
     private bool isGameOver = false;
 
+    // Game Time
+
+    private TimerHandler gameTimer;
+    [SerializeField]
+    private float gameTimeInSeconds = 300f;
+
     public event System.Action<int> OnWaveNumberChanged;
 
     // Player info
@@ -29,7 +35,7 @@ public class WaveDefenderManager : MonoBehaviour
     private int playerCityHealth = 100;
 
     public event System.Action<int> OnPlayerCreditsChanged;
-    public event System.Action<int> OnPlayerCityHealthChanged;
+    public event System.Action<float> OnPlayerCityHealthChanged;
 
     public static WaveDefenderManager Instance { get; private set; }
 
@@ -48,6 +54,7 @@ public class WaveDefenderManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartWave());
+        gameTimer = new TimerHandler(gameTimeInSeconds, TimeUp);
     }
 
     private IEnumerator StartWave()
@@ -109,6 +116,20 @@ public class WaveDefenderManager : MonoBehaviour
 
     // Getters and Setters
 
+    public float GetPlayerCityHealth()
+    {
+        return playerCityHealth;
+    }
+
+    public float GetInitialGameTime()
+    {
+        return gameTimeInSeconds;
+    }
+
+    public float GetGameTime()
+    {
+        return gameTimer.GetTimeLeft();
+    }
     public bool CanAfford(int credits)
     {
         return playerCredits >= credits;
@@ -134,6 +155,11 @@ public class WaveDefenderManager : MonoBehaviour
         isGameOver = true;
     }
 
+    public void TimeUp()
+    {
+        isGameOver = true;
+    }
+
     public void StartNextWave()
     {
         StartCoroutine(StartWave());
@@ -143,7 +169,6 @@ public class WaveDefenderManager : MonoBehaviour
     {
         waveCooldown = cooldown;
     }
-
 
     public void SetWaveNumber(int wave)
     {
