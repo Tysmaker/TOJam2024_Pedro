@@ -75,18 +75,16 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         {
             SortTowers();
             tower = towersInRange[0].gameObject;
+
+            if (tower != null)
+            {
+                agent.destination = tower.transform.position;
+            }
         }
-
-        if (tower != null)
-        {
-            agent.destination = tower.transform.position;
-        }
-
-
-        //Checking for is the tower is destroyed then moves back to the endZones Position
-        if (tower.IsDestroyed())
+        else
         {
             agent.destination = endZone.transform.position;
+            Debug.Log("Go Back to endzone");
         }
     }
 
@@ -108,6 +106,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 break;
             case AttackerStates.Attacking:
                 agent.isStopped = true;
+                AttackTower();
                 break;
             case AttackerStates.Dead:
                 agent.isStopped = true;
@@ -152,13 +151,19 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     }
     private void AttackTower()
     {
+        if(tower != null)
+        {
+            print("Tower Missing");
+            return;
+        }
+
         IDamageable damageable = tower.GetComponent<IDamageable>();
 
         if (damageable != null)
         {
-            damageable.Damage();
+            damageable.TakeDamage(attackerStats.GetAttackDamage());
 
-            Debug.Log(damageable);
+            //Debug.Log(damageable);
         }
         else
         {
@@ -172,11 +177,9 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         Gizmos.DrawWireSphere(transform.position, attackerStats.detectionRange);
     }
 
-    public void Damage()
+    public void TakeDamage(int value)
     {
-        int damage = attackerStats.GetAttackDamage();
-
-        towerStats.SetHealth(damage);
+        attackerStats.SetHealth(value);
 
     }
 }

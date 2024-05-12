@@ -19,6 +19,11 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     private TowerStats towerStats;
     private AttackerStats attackerStats;
 
+    private void Awake()
+    {
+        towerStats = GetComponent<TowerStats>();
+    }
+
     public void SetPersistent()
     {
         DontDestroyOnLoad(gameObject);
@@ -30,10 +35,13 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    public void Damage()
+    public void TakeDamage(int damage)
     {
-        int damage = towerStats.GetAttackDamage();
+        towerStats.SetHealth(damage);
 
-        attackerStats.SetHealth(damage);
+        if(towerStats.GetHealth() <= 0 ) 
+        { 
+           Destroy(gameObject);
+        }
     }
 }
