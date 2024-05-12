@@ -11,18 +11,23 @@ public class UIPlaceObjectHandler : MonoBehaviour
 
     private void Start()
     {
-        PlacementManager.Instance.OnPlaceObject += OnFinish;
-        PlacementManager.Instance.OnCancelManaging += OnFinish;
-        PlacementManager.Instance.OnStartManaging += OnStart;
+        PlacementManager.Instance.OnPlaceObject += FinishManaging;
+        PlacementManager.Instance.OnCancelManaging += FinishManaging;
+        PlacementManager.Instance.OnStartManaging += StartManaging;
     }
 
-    public void StartPlacingObject(GameObject prefab)
+    public void StartPlacingObject(int buttonTowerIndex)
     {
-        prefabToPlace = prefab;
+        prefabToPlace = PlayerTowersManager.GetTowerPrefab(buttonTowerIndex);
+        if (prefabToPlace == null)
+        {
+            Debug.LogError("UIPlaceObjectHandler: prefabToPlace is null");
+            return;
+        }
         PlacementManager.Instance.StartPlacing(prefabToPlace);
-    } 
+    }
 
-    private void OnStart()
+    private void StartManaging()
     {
         foreach (Button button in buttons)
         {
@@ -30,7 +35,7 @@ public class UIPlaceObjectHandler : MonoBehaviour
         }
     }
 
-    private void OnFinish()
+    private void FinishManaging()
     {
         foreach (Button button in buttons)
         {

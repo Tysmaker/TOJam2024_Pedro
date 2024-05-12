@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 366242062}
   - component: {fileID: 366242061}
   m_Layer: 5
-  m_Name: BTN_LargeTower
+  m_Name: BTN_FirstTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,11 +346,10 @@ MonoBehaviour:
       - m_Target: {fileID: 326683647}
         m_TargetAssemblyTypeName: UIPlaceObjectHandler, Assembly-CSharp
         m_MethodName: StartPlacingObject
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 517825056834748707, guid: be81a4bf0224ff24e86b1dd49617f802,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -891,7 +890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &970011930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,7 +1115,7 @@ GameObject:
   - component: {fileID: 1463133399}
   - component: {fileID: 1463133398}
   m_Layer: 5
-  m_Name: BTN_SmallTower
+  m_Name: BTN_ThirdTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,12 +1188,11 @@ MonoBehaviour:
       - m_Target: {fileID: 326683647}
         m_TargetAssemblyTypeName: UIPlaceObjectHandler, Assembly-CSharp
         m_MethodName: StartPlacingObject
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 6375795662751712373, guid: c52bf09c8e54405408486eefb0a74234,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1250,7 +1248,7 @@ GameObject:
   - component: {fileID: 1498933475}
   - component: {fileID: 1498933474}
   m_Layer: 5
-  m_Name: BTN_MediumTower
+  m_Name: BTN_SecondTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1323,12 +1321,11 @@ MonoBehaviour:
       - m_Target: {fileID: 326683647}
         m_TargetAssemblyTypeName: UIPlaceObjectHandler, Assembly-CSharp
         m_MethodName: StartPlacingObject
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 6870136808186062676, guid: dc9e8824a0c07f645ab13bb3f1e5d6c5,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

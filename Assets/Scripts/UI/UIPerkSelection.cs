@@ -9,12 +9,14 @@ public class UIPerkSelection : MonoBehaviour
     private IPerkable[] randomlyChosenPerks = new IPerkable[3];
     [SerializeField]
     private Transform anchor;
-    [SerializeField]
+
     private int perkCount = 0;
-
     private GameObject currentTower;
+    
+    // Booleans
+    private bool isSelectingPerks = false;
+    public bool IsSelectionPhaseComplete { get; private set; } = false;
 
-    private bool isSelectiongPerks = false;
 
     // UI Elements
     [SerializeField] private GameObject perkButtonPrefab;
@@ -35,8 +37,7 @@ public class UIPerkSelection : MonoBehaviour
             if (perk is IPerkable) availableTowerPerks.Add(perk);
         }
         randomlyChosenPerks = GetRandomPerks();
-        perkCount = randomlyChosenPerks.Length;
-
+        
         if (!PlayerTowersManager.IsInitialized)
         {
             PlayerTowersManager.Init(anchor);
@@ -44,7 +45,8 @@ public class UIPerkSelection : MonoBehaviour
     }
 
     private void Start()
-    {
+    { 
+        perkCount = 0;
         foreach (var tower in PlayerTowersManager.playerTowers)
         {
             StartCoroutine(WaitForPerkSelection(tower.Value.gameObject, tower.Key));
@@ -53,14 +55,33 @@ public class UIPerkSelection : MonoBehaviour
 
     private IEnumerator WaitForPerkSelection(GameObject tower, string towerName)
     {
-
-        while (isSelectiongPerks)
+        while (isSelectingPerks)
         {
             yield return null;
         }
-        UpdateUI();
+        isSelectingPerks = true;
+        AssignCurrentTower(tower, towerName);
+        DisableTowes();
+        CreateUI();
+    }
+    private void AssignCurrentTower(GameObject tower, string towerName)
+    {
         currentTower = tower;
         currentTower.name = towerName;
+        Debug.Log("Perks Selected");
+    }
+
+    private void DisableTowes()
+    {
+        if (IsSelectionPhaseComplete)
+        {
+            foreach (var tower in PlayerTowersManager.playerTowers)
+            {
+                tower.Value.gameObject.SetActive(false);
+            }
+            return;
+        }
+
         foreach (var t in PlayerTowersManager.playerTowers)
         {
             if (t.Key != currentTower.name)
@@ -72,10 +93,8 @@ public class UIPerkSelection : MonoBehaviour
                 t.Value.gameObject.SetActive(true);
             }
         }
-        CreateUI();
-        isSelectiongPerks = true;
-        Debug.Log("Perks Selected");
     }
+
 
     private IPerkable[] GetRandomPerks()
     {
@@ -103,6 +122,7 @@ public class UIPerkSelection : MonoBehaviour
 
     private void AddPerk(IPerkable perk)
     {
+        perkCount++;
         var towerStats = currentTower.GetComponent<TowerStats>();
         var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
         towerPerksHandler.AddPerk(perk);
@@ -112,15 +132,25 @@ public class UIPerkSelection : MonoBehaviour
 
     private void PerkSelected()
     {
-        isSelectiongPerks = false;
+        isSelectingPerks = false;
         foreach (Transform child in perkButtonContainer)
         {
             Destroy(child.gameObject);
         }
+        if (perkCount == PlayerTowersManager.playerTowers.Count)
+        {
+            PerkSelectionComplete();
+        }
     }
 
-    private void UpdateUI()
+    private void PerkSelectionComplete()
     {
+        IsSelectionPhaseComplete = true;
+        foreach (var tower in PlayerTowersManager.playerTowers)
+        {
+            tower.Value.gameObject.SetActive(false);
+        }
+        Debug.Log("Perk Selection Complete");
     }
 
 
