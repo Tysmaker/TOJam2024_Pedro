@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -41,6 +42,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         attackerStates = AttackerStates.Moving;
         agent.destination = endZone.transform.position;
+        Delay(attackerStats.GetAttackSpeed(), AttackTower, -1, LoopType.Restart);
     }
 
     // Update is called once per frame
@@ -116,7 +118,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 animator.SetBool("isMoving", false);
                 animator.SetTrigger("attack");
 
-                AttackTower();
+                //AttackTower();
                 break;
             case AttackerStates.Dead:
                 agent.isStopped = true;
