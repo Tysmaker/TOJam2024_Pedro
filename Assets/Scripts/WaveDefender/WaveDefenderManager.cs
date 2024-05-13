@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using DG.Tweening;
 using static Assets.Scripts.Utils.TweenUtils;
 
 public class WaveDefenderManager : MonoBehaviour
@@ -10,6 +10,9 @@ public class WaveDefenderManager : MonoBehaviour
     private int waveNumber = 0;
     [SerializeField]
     private float waveCooldown = 10f;
+    [SerializeField]
+    private int waveEnemiesLimit = 10;
+    private List<AttackerBehaviour> activeEnemies = new List<AttackerBehaviour>();
     [SerializeField]
     private Transform spawnArea;
     [SerializeField]
@@ -64,30 +67,59 @@ public class WaveDefenderManager : MonoBehaviour
         isWaveComplete = false;
         waveNumber++;
         OnWaveNumberChanged?.Invoke(waveNumber);
+        Delay(1, () =>
+        {
+            SpawnWave();
+        }, -1, LoopType.Restart);
+    }
+
+    private void SpawnWave()
+    {
         foreach (var enemy in enemyPrefabs)
         {
-            var randomPositionInsideSpawnArea = new Vector3(
+            SpawnAttacker(enemy);
+        }
+    }
+
+    private void SpawnAttacker(GameObject attacker)
+    {
+        if (IsActiveEnemiesLimitReached())
+        {
+            Debug.Log("Limit reached");
+            return;
+        }
+        var randomPositionInsideSpawnArea = new Vector3(
                 Random.Range(spawnArea.position.x - spawnArea.localScale.x / 2, spawnArea.position.x + spawnArea.localScale.x / 2), // X
                 0, // Y
                 Random.Range(spawnArea.position.z - spawnArea.localScale.z / 2, spawnArea.position.z + spawnArea.localScale.z / 2) // Z
             );
-            SpawnAttacker(enemy, randomPositionInsideSpawnArea);
-        }
-    }
 
-    private void SpawnAttacker(GameObject attacker, Vector3 position)
-    {
-        var attackerInstance = Instantiate(attacker, position, Quaternion.identity);
-        var spawnCoolDown = attackerInstance.GetComponent<AttackerStats>().GetSpawnCoolDown();
+        var attackerInstance = Instantiate(attacker, randomPositionInsideSpawnArea, Quaternion.AngleAxis(180, Vector3.up));
+        var attackerStats = attackerInstance.GetComponent<AttackerStats>();
+        var spawnCoolDown = attackerStats.GetSpawnCoolDown();
         var attackerBehavior = attackerInstance.GetComponent<AttackerBehaviour>();
+
+        activeEnemies.Add(attackerBehavior);
 
         attackerBehavior.SetEndZone(targetArea.gameObject);
 
-        
         Delay(spawnCoolDown, () =>
         {
-            SpawnAttacker(attacker, position);
+            SpawnAttacker(attacker);
         });
+    }
+
+    private bool IsActiveEnemiesLimitReached()
+    {
+        Debug.Log(activeEnemies.Count);
+        foreach (var enemy in activeEnemies)
+        {
+            if (enemy.GetAttackerState() == AttackerBehaviour.AttackerStates.Dead)
+            {
+                activeEnemies.Remove(enemy);
+            }
+        }
+        return activeEnemies.Count >= waveEnemiesLimit;
     }
 
     public void AddCredits(int credits)

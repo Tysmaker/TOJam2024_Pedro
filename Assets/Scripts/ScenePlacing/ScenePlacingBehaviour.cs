@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScenePlacingBehaviour : MonoBehaviour
 {
-    public float PlayerCredits { get; private set; } = 100;
+    public float PlayerCredits { get; private set; } = 500;
     [SerializeField] public TextMeshProUGUI creditsText;
 
     // Temporary Gameplay progression

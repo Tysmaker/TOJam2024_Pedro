@@ -28,13 +28,24 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     [SerializeField]
     private List<TowerStats> towersInRange = new List<TowerStats>();
     private Animator animator;
+    [SerializeField]
+    private bool hasRagdoll = false;
+    private Rigidbody[] ragdollRigidbodies;
 
     private void Awake()
     {
+        if (hasRagdoll)
+        {
+            ragdollRigidbodies = GetComponentsInChildren<Rigidbody>();
+            foreach (var rb in ragdollRigidbodies)
+            {
+                rb.isKinematic = true;
+            }
+        }
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         attackerStats = GetComponent<AttackerStats>();
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -48,6 +59,21 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
+        if (attackerStates == AttackerStates.Dead)
+        {
+            agent.isStopped = true;
+            StopAllCoroutines();
+
+            if (hasRagdoll)
+            {
+                foreach (var rb in ragdollRigidbodies)
+                {
+                    rb.isKinematic = false;
+                }
+            }
+            
+            return;
+        }
         CheckForTowers();
         CheckStates();
         CheckAttackRange();
@@ -117,13 +143,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 agent.isStopped = true;
                 animator.SetBool("isMoving", false);
                 animator.SetTrigger("attack");
-
-                //AttackTower();
-                break;
-            case AttackerStates.Dead:
-                agent.isStopped = true;
-                Debug.Log("Attacker Is Dead");
-                Destroy(gameObject);
                 break;
         }
     }
@@ -153,10 +172,10 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         }
     }
 
-   
+
     private void AttackTower()
     {
-        if(tower == null)
+        if (tower == null)
         {
             print("Tower Missing");
             return;
@@ -196,5 +215,10 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     public void SetEndZone(GameObject endZone)
     {
         this.endZone = endZone;
+    }
+
+    public AttackerStates GetAttackerState()
+    {
+        return attackerStates;
     }
 }

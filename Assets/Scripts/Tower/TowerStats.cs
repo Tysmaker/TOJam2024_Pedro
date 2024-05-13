@@ -29,6 +29,10 @@ public class TowerStats : MonoBehaviour
     {
         this.attackDamage += attackAmount;
     }
+    public void IncreaseAttackSpeed(float attackSpeedAmount)
+    {
+        this.attackSpeed /= attackSpeedAmount;
+    }
     public void SetPriority(int priority)
     {
         this.priority += priority;

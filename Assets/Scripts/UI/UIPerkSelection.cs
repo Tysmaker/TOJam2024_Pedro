@@ -6,7 +6,7 @@ public class UIPerkSelection : MonoBehaviour
 {
 
     private List<IPerkable> availableTowerPerks = new List<IPerkable>();
-    private IPerkable[] randomlyChosenPerks = new IPerkable[3];
+    private List<IPerkable> randomlyChosenPerks = new List<IPerkable>();
     [SerializeField]
     private Transform anchor;
 
@@ -41,7 +41,7 @@ public class UIPerkSelection : MonoBehaviour
         {
             if (perk is IPerkable) availableTowerPerks.Add(perk);
         }
-        randomlyChosenPerks = GetRandomPerks();
+        // randomlyChosenPerks = GetRandomPerks();
         
         if (!PlayerTowersManager.IsInitialized)
         {
@@ -65,6 +65,7 @@ public class UIPerkSelection : MonoBehaviour
             yield return null;
         }
         isSelectingPerks = true;
+        randomlyChosenPerks = GetRandomPerks();
         AssignCurrentTower(tower, towerName);
         DisableTowes();
         CreateUI();
@@ -101,14 +102,15 @@ public class UIPerkSelection : MonoBehaviour
     }
 
 
-    private IPerkable[] GetRandomPerks()
+    private List<IPerkable> GetRandomPerks()
     {
-        IPerkable[] randomPerks = new IPerkable[3];
+        List<IPerkable> randomPerks = new List<IPerkable>();
+        var towerPerks = new List<IPerkable>(availableTowerPerks);
         for (int i = 0; i < 3; i++)
         {
-            var randomIndex = Random.Range(0, availableTowerPerks.Count);
-            randomPerks[i] = availableTowerPerks[randomIndex];
-            availableTowerPerks.RemoveAt(randomIndex);
+            var randomIndex = Random.Range(0, towerPerks.Count);
+            randomPerks.Add(towerPerks[randomIndex]);
+            towerPerks.RemoveAt(randomIndex);
         }
         return randomPerks;
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4039811740788824710}
   - component: {fileID: 7420028982684173721}
   - component: {fileID: -6577626296616008303}
+  - component: {fileID: 9144163880264804125}
   m_Layer: 0
   m_Name: Tier01
   m_TagString: Untagged
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14526f5d467280b4d913c949a2746935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armourIncrease: 5
+  armourIncrease: 50
   perkName: Extra beefy!
   description: Problems with losing your tower? Well no more!
   cost: 50
@@ -63,8 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4ea9ae89621174fbfb296d7c5e86d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackIncrease: 5
-  perkName: Power Power Power!
+  attackIncrease: 50
+  perkName: PO-PO-POWER!
   description: Not that overpowered tbh!
   cost: 25
 --- !u!114 &7420028982684173721
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ac1aa777cb9fa45a5b9b5735500bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 5
+  attackRange: 35
   cost: 10
   perkName: Elven Vision!
   description: Increased attack range cuz why not?
@@ -99,3 +100,19 @@ MonoBehaviour:
   perkName: The Goat!
   description: 100% is not gonna attract attention!
   cost: 10
+--- !u!114 &9144163880264804125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371082332439317538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c39b743736a3574a9a3d2d8a2722ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeedAmount: 15
+  perkName: Fast AF BOI!
+  description: Tired of those slow ass towers? Well now tower goes zoom zoom!
+  cost: 0

@@ -76,7 +76,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
         CheckForEnemiesInRange();
 
         if (enemyInRange == null) return;
-        LookAt(transform, enemyInRange.transform, 0, ease: Ease.Linear);
+        //LookAt(transform, enemyInRange.transform, 0, ease: Ease.Linear);
     }
 
     private void CheckForEnemiesInRange()
@@ -92,6 +92,9 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
         {
             if (enemyCollider == null) continue;
 
+            var enemyState = enemyCollider.GetComponent<AttackerBehaviour>().GetAttackerState();
+            if (enemyState == AttackerBehaviour.AttackerStates.Dead) continue;
+
             var enemy = enemyCollider.GetComponent<AttackerStats>();
             if (enemy == null) continue;
 
@@ -100,7 +103,6 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
                 _orderedEnemiesInRange.Add(enemy);
             }
         }
-        Debug.Log(_orderedEnemiesInRange.Count + " enemies in range");
         OrderEnemiesInRange();
     }
 

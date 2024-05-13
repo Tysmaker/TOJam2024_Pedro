@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveNumber: 0
   waveCooldown: 5
+  waveEnemiesLimit: 10
   spawnArea: {fileID: 449877192}
   targetArea: {fileID: 592559761}
   enemyPrefabs:
@@ -534,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 148848313}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 0, z: -0.877}
+  m_LocalPosition: {x: -1.13, y: 0, z: -1.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2776,6 +2777,7 @@ Transform:
   m_Children:
   - {fileID: 49376975}
   - {fileID: 1582074977}
+  - {fileID: 1065908777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &715786230
@@ -2879,14 +2881,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762064775}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.05053721, y: 0.9486897, z: -0.23956044, w: -0.20011163}
-  m_LocalPosition: {x: 9.7, y: 5.1, z: 16.14}
+  m_LocalRotation: {x: 0.09274505, y: -0.90200967, z: 0.34489313, w: 0.24254}
+  m_LocalPosition: {x: 9.130475, y: 21.2, z: 54.220947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 762978546}
   m_Father: {fileID: 715786231}
-  m_LocalEulerAnglesHint: {x: 28.344, y: -156.178, z: -0.001}
+  m_LocalEulerAnglesHint: {x: 41.85, y: -149.9, z: -0.001}
 --- !u!114 &762064778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2950,7 +2952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 3
-  m_FollowOffset: {x: 9.7, y: 8, z: 16.14}
+  m_FollowOffset: {x: 9.7, y: 15, z: 16.14}
   m_XDamping: 0.1
   m_YDamping: 0.1
   m_ZDamping: 0.1
@@ -3195,6 +3197,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1065908776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065908777}
+  - component: {fileID: 1065908779}
+  - component: {fileID: 1065908778}
+  m_Layer: 0
+  m_Name: NoNoZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065908777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065908776}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.62, y: 0, z: -11.34}
+  m_LocalScale: {x: 7.807817, y: 1, z: 3.524214}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 713913333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1065908778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065908776}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1065908779
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065908776}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1125521883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,8 +3904,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283872705}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.050540056, y: -0.9486893, z: 0.23956038, w: 0.20011264}
-  m_LocalPosition: {x: 9.7, y: 5.1, z: 16.14}
+  m_LocalRotation: {x: 0.05054006, y: -0.94868934, z: 0.2395604, w: 0.20011266}
+  m_LocalPosition: {x: 9.7, y: 8, z: 16.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6099,7 +6163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1862475408}
   - component: {fileID: 1862475407}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: LevelBoundsConfiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6125,8 +6189,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8153768, y: 1.2324085, z: 2.0906448}
-  m_Center: {x: -0.0021921273, y: 0.1162037, z: -0.67621315}
+  m_Size: {x: 1.8153768, y: 1.3256266, z: 2.350625}
+  m_Center: {x: -0.0021921273, y: 0.16281174, z: -0.5462207}
 --- !u!4 &1862475408
 Transform:
   m_ObjectHideFlags: 0
