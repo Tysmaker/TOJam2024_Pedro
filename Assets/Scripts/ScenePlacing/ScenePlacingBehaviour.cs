@@ -8,6 +8,11 @@ public class ScenePlacingBehaviour : MonoBehaviour
     public float PlayerCredits { get; private set; } = 100;
     [SerializeField] public TextMeshProUGUI creditsText;
 
+    // Temporary Gameplay progression
+
+    [SerializeField] private GameObject nextPhase;	
+    [SerializeField] private GameObject thisPhase;
+
     // Singleton
     public static ScenePlacingBehaviour Instance { get; private set; }
 
@@ -22,12 +27,17 @@ public class ScenePlacingBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         UpdateUI();
+    }
 
-        ///////////////////////////////////////////// TESTING  /////////////////////////////////////////////
-        InitPrefabs();
+    public void StartGame()
+    {
+        // Start the game through the Defender Gameplay Manager
+        thisPhase.SetActive(false);
+        nextPhase.SetActive(true);
     }
 
     public void AddCredits(float credits)
@@ -55,14 +65,5 @@ public class ScenePlacingBehaviour : MonoBehaviour
     private void UpdateUI()
     {
         creditsText.text = PlayerCredits.ToString();
-    }
-
-
-    ///////////////////////////////////////////// TESTING  /////////////////////////////////////////////
-    ///
-
-    private void InitPrefabs()
-    {
-        PlayerTowersManager.Init(transform);
     }
 }

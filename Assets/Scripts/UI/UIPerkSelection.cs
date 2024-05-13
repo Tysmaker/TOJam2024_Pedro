@@ -22,6 +22,11 @@ public class UIPerkSelection : MonoBehaviour
     [SerializeField] private GameObject perkButtonPrefab;
     [SerializeField] private Transform perkButtonContainer;
 
+    // Temporary Gameplay progression
+
+    [SerializeField] private GameObject nextPhase;
+    [SerializeField] private GameObject thisPhase;
+
 
     private void Awake()
     {
@@ -150,6 +155,8 @@ public class UIPerkSelection : MonoBehaviour
         {
             tower.Value.gameObject.SetActive(false);
         }
+        nextPhase.SetActive(true);
+        thisPhase.SetActive(false);
         Debug.Log("Perk Selection Complete");
     }
 

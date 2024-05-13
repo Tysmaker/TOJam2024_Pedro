@@ -16,8 +16,9 @@ public class UIPlaceObjectHandler : MonoBehaviour
         PlacementManager.Instance.OnStartManaging += StartManaging;
     }
 
-    public void StartPlacingObject(int buttonTowerIndex)
+    public void StartPlacingObject(UITowerButtonInfo buttonInfo)
     {
+        var buttonTowerIndex = buttonInfo.GetTowerIndex();
         prefabToPlace = PlayerTowersManager.GetTowerPrefab(buttonTowerIndex);
 
         // Check if the player can afford the object

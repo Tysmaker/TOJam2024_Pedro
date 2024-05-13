@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389ea7684a0c25d489068c1e99010fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: Thunder Clap Tower
   health: 100
   armour: 25
   range: 5

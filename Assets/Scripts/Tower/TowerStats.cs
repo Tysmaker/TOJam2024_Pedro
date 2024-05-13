@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class TowerStats : MonoBehaviour
 {
+    [SerializeField] private string towerName;
     [SerializeField] private int health;
     [SerializeField] private int armour;
     [SerializeField] private float range;
@@ -76,7 +77,12 @@ public class TowerStats : MonoBehaviour
     {
         health -= value;
     }
-
-
-
+    public float GetCooldown()
+    {
+        return coolDown;
+    }   
+    public string GetTowerName()
+    {
+        return towerName;
+    }
 }
