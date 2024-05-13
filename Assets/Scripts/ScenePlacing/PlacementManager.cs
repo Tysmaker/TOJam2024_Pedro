@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static Assets.Scripts.Utils.InstantiateUtils;
@@ -126,9 +127,17 @@ public class PlacementManager : MonoBehaviour
         ScenePlacingBehaviour.Instance.RemoveCredits(objectInstance.GetComponent<TowerStats>().GetCost());
         placeable.ObjectCollider.gameObject.layer = LayerMask.NameToLayer("Tower");
         placeable.ObjectRenderer.sharedMaterial = placeable.DefaultMaterial;
-        OnEnd();
+
+        var costToPlaceAnother = objectInstance.GetComponent<TowerStats>().GetCost();
+        if (!ScenePlacingBehaviour.Instance.CanAfford(costToPlaceAnother))
+        {
+            OnEnd();
+            OnPlaceObject?.Invoke();
+            Debug.Log("Not enough credits");
+            return;
+        }        
         OnPlaceObject?.Invoke();
-        Debug.Log("OnPlace");
+        StartPlacing(objectToPlace); 
     }
 
     public void SwitchRemoving()
@@ -159,7 +168,7 @@ public class PlacementManager : MonoBehaviour
 
     public void OnRemove(GameObject objectToRemove)
     {
-        if (objectToRemove == null) 
+        if (objectToRemove == null)
         {
             Debug.LogError("Object to remove is null");
             return;

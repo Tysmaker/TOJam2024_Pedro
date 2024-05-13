@@ -505,7 +505,7 @@ MonoBehaviour:
   spawnArea: {fileID: 449877192}
   targetArea: {fileID: 592559761}
   enemyPrefabs:
-  - {fileID: 194614, guid: 7bb0e29cc0dfc1242a37465798c3e47b, type: 3}
+  - {fileID: 194614, guid: 18fe1d31aee3a274b83bd930c8368b1c, type: 3}
   - {fileID: 108508, guid: 1ae6e4e008749404d95ce29b596ce5e0, type: 3}
   - {fileID: 175986, guid: cdc26bac7dd09f24082080f45f2cd4ba, type: 3}
   - {fileID: 137832, guid: 34a4099d5b5c6594b93436664baf1054, type: 3}
