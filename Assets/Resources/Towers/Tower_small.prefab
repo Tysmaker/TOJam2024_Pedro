@@ -186,13 +186,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Thunder Clap Tower
   health: 100
-  armour: 25
-  range: 5
-  attackDamage: 5
-  attackSpeed: 1
+  armour: 0
+  range: 7
+  attackDamage: 10
+  attackSpeed: 2
   priority: 0
   cost: 25
-  coolDown: 1
+  coolDown: 9.8
 --- !u!114 &-4503710891895776383
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -121,14 +121,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerName: Phoenix Beacon Tower
-  health: 100
-  armour: 25
+  health: 50
+  armour: 0
   range: 5
-  attackDamage: 5
+  attackDamage: 15
   attackSpeed: 1
   priority: 0
-  cost: 25
-  coolDown: 1
+  cost: 50
+  coolDown: 1.5
 --- !u!114 &-7180139127597677631
 MonoBehaviour:
   m_ObjectHideFlags: 0

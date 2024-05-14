@@ -3588,12 +3588,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081b2133103348344b8af30073697de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   armour: 0
-  attackRange: 2.5
+  attackRange: 1.5
   detectionRange: 3
   attackDamage: 5
-  attackSpeed: 1
+  attackSpeed: 2
   coolDown: 3
 --- !u!114 &1300328828377930
 MonoBehaviour:
@@ -3613,6 +3613,7 @@ MonoBehaviour:
     m_Bits: 128
   attackerStates: 0
   towersInRange: []
+  hasRagdoll: 0
 --- !u!54 &9071963051445300494
 Rigidbody:
   m_ObjectHideFlags: 0
