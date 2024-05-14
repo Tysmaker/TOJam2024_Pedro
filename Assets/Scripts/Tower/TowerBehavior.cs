@@ -114,8 +114,8 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     {
         if (deathFX != null)
         {
-            var positionOffset = transform.position + new Vector3(0,transform.localScale.y, 0);
-            Instantiate(deathFX, positionOffset, Quaternion.identity);
+            var positionOffset = transform.position + new Vector3(0,0.5f, 0);
+            Instantiate(deathFX, positionOffset, Quaternion.AngleAxis(-90, Vector3.right));
         }
         Destroy(gameObject);
     }
