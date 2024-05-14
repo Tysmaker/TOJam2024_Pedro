@@ -32,6 +32,10 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     private bool hasRagdoll = false;
     private Rigidbody[] ragdollRigidbodies;
 
+    // FXs
+    [SerializeField]
+    private GameObject deathFX;
+
     private void Awake()
     {
         if (hasRagdoll)
@@ -61,19 +65,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         if (attackerStates == AttackerStates.Dead)
         {
-            agent.isStopped = true;
-            agent.velocity = Vector3.zero;
-            StopAllCoroutines();
 
-            if (hasRagdoll)
-            {
-                foreach (var rb in ragdollRigidbodies)
-                {
-                    rb.isKinematic = false;
-                }
-            }
-            gameObject.SetActive(false);
-            Destroy(gameObject, 10f);
             return;
         }
         CheckForTowers();
@@ -178,7 +170,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         if (tower == null || attackerStates != AttackerStates.Attacking)
         {
-           return;
+            return;
         }
 
         IDamageable damageable = tower.GetComponent<IDamageable>();
@@ -207,9 +199,30 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
 
         if (attackerStats.GetHealth() <= 0)
         {
+            OnDeath();
+        }
+    }
+
+    private void OnDeath()
+    {
+        if (deathFX != null)
+        {
+            var positionOffset = transform.position + new Vector3(0, 1.5f, 0);
+            Instantiate(deathFX, positionOffset , Quaternion.identity);
             attackerStates = AttackerStates.Dead;
         }
-
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+        StopAllCoroutines();
+        if (hasRagdoll)
+        {
+            foreach (var rb in ragdollRigidbodies)
+            {
+                rb.isKinematic = false;
+            }
+        }
+        gameObject.SetActive(false);
+        Destroy(gameObject, 10f);
     }
 
     public void SetEndZone(GameObject endZone)

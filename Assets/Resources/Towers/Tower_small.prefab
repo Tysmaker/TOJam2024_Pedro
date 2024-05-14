@@ -173,6 +173,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
+  deathFX: {fileID: 7226888052703040409, guid: 7ec363c8df426644ea85f8d6d570561c, type: 3}
 --- !u!114 &3731016382491116139
 MonoBehaviour:
   m_ObjectHideFlags: 0

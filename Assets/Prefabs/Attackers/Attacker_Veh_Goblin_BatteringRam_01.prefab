@@ -263,6 +263,7 @@ MonoBehaviour:
   attackerStates: 0
   towersInRange: []
   hasRagdoll: 0
+  deathFX: {fileID: 5985634496115995773, guid: 463cf9f7af4680240898f6aeba3fe3e6, type: 3}
 --- !u!54 &-2574894006319709234
 Rigidbody:
   m_ObjectHideFlags: 0

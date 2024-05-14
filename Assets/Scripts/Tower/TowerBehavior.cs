@@ -29,6 +29,10 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     private List<AttackerStats> _orderedEnemiesInRange = new List<AttackerStats>();
     private AttackerStats enemyInRange;
 
+    // FXs
+    [SerializeField]
+    private GameObject deathFX;
+
     private void Awake()
     {
         towerStats = GetComponent<TowerStats>();
@@ -56,7 +60,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
 
         if(towerStats.GetHealth() <= 0 ) 
         { 
-           Destroy(gameObject);
+            OnDeath();
         }
     }
 
@@ -104,6 +108,16 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
             }
         }
         OrderEnemiesInRange();
+    }
+
+    private void OnDeath()
+    {
+        if (deathFX != null)
+        {
+            var positionOffset = transform.position + new Vector3(0,transform.localScale.y, 0);
+            Instantiate(deathFX, positionOffset, Quaternion.identity);
+        }
+        Destroy(gameObject);
     }
 
     private void OrderEnemiesInRange()
