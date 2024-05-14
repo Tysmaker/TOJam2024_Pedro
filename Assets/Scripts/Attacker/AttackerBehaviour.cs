@@ -176,10 +176,9 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
 
     private void AttackTower()
     {
-        if (tower == null)
+        if (tower == null || attackerStates != AttackerStates.Attacking)
         {
-            print("Tower Missing");
-            return;
+           return;
         }
 
         IDamageable damageable = tower.GetComponent<IDamageable>();
