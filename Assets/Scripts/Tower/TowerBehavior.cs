@@ -1,6 +1,8 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Assets.Scripts.Utils.TweenUtils;
 
@@ -23,6 +25,8 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
 
     [SerializeField]
     private LayerMask enemyLayer;
+    [SerializeField]
+    private GameObject towerRangeLine;
 
 
     private readonly Collider[] _enemyColliders = new Collider[10];
@@ -78,6 +82,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     private void Update()
     {
         CheckForEnemiesInRange();
+        UpdateTowerRangeLine();
 
         if (enemyInRange == null) return;
         //LookAt(transform, enemyInRange.transform, 0, ease: Ease.Linear);
@@ -108,6 +113,14 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
             }
         }
         OrderEnemiesInRange();
+    }
+
+    private void UpdateTowerRangeLine()
+    {
+        float xScale = towerStats.GetAttackRange() / 5;
+        float zScale = towerStats.GetAttackRange() / 5;
+
+        towerRangeLine.transform.localScale = new Vector3(xScale,0, zScale);
     }
 
     private void OnDeath()
