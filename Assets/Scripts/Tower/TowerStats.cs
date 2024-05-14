@@ -7,6 +7,7 @@ using UnityEngine;
 public class TowerStats : MonoBehaviour
 {
     [SerializeField] private string towerName;
+    [SerializeField] private int maxHealth;
     [SerializeField] private int health;
     [SerializeField] private int armour;
     [SerializeField] private float range;
@@ -15,6 +16,8 @@ public class TowerStats : MonoBehaviour
     [SerializeField] private int priority;
     [SerializeField] private float cost;
     [SerializeField] private float coolDown;
+
+    public event Action<int> OnHealthChanged;
 
     public void SetAttackRange(float range)
     {
@@ -67,6 +70,11 @@ public class TowerStats : MonoBehaviour
         return health;
     }
 
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
     public float GetAttackRange()
     {
         return range;
@@ -80,6 +88,7 @@ public class TowerStats : MonoBehaviour
     public void SetHealth(int value)
     {
         health -= value;
+        OnHealthChanged?.Invoke(health);
     }
     public float GetCooldown()
     {
