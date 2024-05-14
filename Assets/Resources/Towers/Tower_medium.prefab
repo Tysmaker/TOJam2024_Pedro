@@ -379,6 +379,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2480822396101366503, guid: 13fe0b3532d1f694d952cce185a20240,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3870606256727235496, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
       propertyPath: towerStats
@@ -442,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
@@ -452,7 +457,7 @@ PrefabInstance:
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
@@ -462,12 +467,12 @@ PrefabInstance:
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.71
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
@@ -477,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345295147235584113, guid: 13fe0b3532d1f694d952cce185a20240,
         type: 3}
@@ -488,6 +493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI_TowerHealth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969067808553525007, guid: 13fe0b3532d1f694d952cce185a20240,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

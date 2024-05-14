@@ -20,4 +20,14 @@ public class UITowerHealth : MonoBehaviour
     {
         healthSlider.value = health;
     }
+
+    public void Update()
+    {
+        LookTowardsCamera();
+    }
+
+    private void LookTowardsCamera()
+    {
+        LookAt(transform, Camera.main.transform, 0);
+    }
 }
