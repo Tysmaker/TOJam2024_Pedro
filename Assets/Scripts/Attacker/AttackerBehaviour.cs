@@ -62,6 +62,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         if (attackerStates == AttackerStates.Dead)
         {
             agent.isStopped = true;
+            agent.velocity = Vector3.zero;
             StopAllCoroutines();
 
             if (hasRagdoll)
@@ -71,7 +72,8 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                     rb.isKinematic = false;
                 }
             }
-            
+            gameObject.SetActive(false);
+            Destroy(gameObject, 10f);
             return;
         }
         CheckForTowers();
@@ -137,7 +139,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
             case AttackerStates.Moving:
                 agent.isStopped = false;
                 animator.SetBool("isMoving", true);
-                Debug.Log("Attacker Is Moving");
                 break;
             case AttackerStates.Attacking:
                 agent.isStopped = true;

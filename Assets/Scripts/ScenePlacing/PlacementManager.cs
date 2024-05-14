@@ -102,24 +102,39 @@ public class PlacementManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, floorLayer))
         {
+            var currentPosition = hit.point;
+            var snapValue = 0.5f;
+            // Calculate snapped position
+            float snappedX = Snap(currentPosition.x, snapValue);
+            float snappedY = Snap(currentPosition.y, snapValue);
+            float snappedZ = Snap(currentPosition.z, snapValue);
 
-            objectInstance.transform.position = hit.point;
+            var snappedPosition = new Vector3(snappedX, snappedY, snappedZ);
+            objectInstance.transform.position = snappedPosition;
+
+            Debug.Log("Snapped position: " + snappedPosition);
+
             placeable.ObjectCollider.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-            if (Physics.CheckSphere(hit.point, placeable.ObjectRadius, unplaceableLayer))
+            if (Physics.CheckSphere(snappedPosition, placeable.ObjectRadius, unplaceableLayer))
             {
                 Debug.Log("Invalid");
                 canBePlaced = false;
-                objectInstance.transform.position = hit.point;
+                //objectInstance.transform.position = hit.point;
                 placeable.ObjectRenderer.sharedMaterial = previewMaterialInvalid;
             }
             else
             {
                 Debug.Log("Valid");
                 canBePlaced = true;
-                objectInstance.transform.position = hit.point;
+                //objectInstance.transform.position = hit.point;
                 placeable.ObjectRenderer.sharedMaterial = previewMaterialValid;
             }
         }
+    }
+    // Snapping function
+    float Snap(float value, float snapValue)
+    {
+        return Mathf.Round(value / snapValue) * snapValue;
     }
 
     public void OnPlace()
@@ -135,9 +150,9 @@ public class PlacementManager : MonoBehaviour
             OnPlaceObject?.Invoke();
             Debug.Log("Not enough credits");
             return;
-        }        
+        }
         OnPlaceObject?.Invoke();
-        StartPlacing(objectToPlace); 
+        StartPlacing(objectToPlace);
     }
 
     public void SwitchRemoving()
