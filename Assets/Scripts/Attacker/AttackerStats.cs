@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackerStats : MonoBehaviour
 {
+    [SerializeField] private int maxHealth;
     [SerializeField] private int health;
     [SerializeField] private int armour;
     [SerializeField] private float attackRange;
@@ -11,6 +12,9 @@ public class AttackerStats : MonoBehaviour
     [SerializeField] private int attackDamage;
     [SerializeField] private float attackSpeed;
     [SerializeField] private float coolDown;
+
+    public event System.Action<int> OnHealthChanged;
+
 
 
     public int GetAttackDamage()
@@ -21,6 +25,11 @@ public class AttackerStats : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
     }
 
     public int GetArmour()
@@ -42,9 +51,10 @@ public class AttackerStats : MonoBehaviour
     {
         return attackRange;
     }
-
+    
     public void SetHealth(int value)
     {
         health -= value;
+        OnHealthChanged?.Invoke(health);
     }
 }

@@ -10,7 +10,7 @@ using System.Linq;
 using System;
 using System.Threading.Tasks;
 #endif
-[Serializable]
+[System.Serializable]
 public class Tween
 {
     public enum TweenType
@@ -39,7 +39,7 @@ public class Tween
     public int vibrato;
     public float randomness;
 
-    public void DoTween(Action onComplete = null)
+    public void DoTween(System.Action onComplete = null)
     {
         switch (tweenType)
         {
