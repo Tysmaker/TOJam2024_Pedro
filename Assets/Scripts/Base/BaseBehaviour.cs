@@ -78,6 +78,10 @@ public class BaseBehaviour : MonoBehaviour
                     healthBelow50FX.SetActive(true);
                 }
             }
+            if (takeDamageFX.gameObject.activeSelf == false) 
+            {
+                takeDamageFX.gameObject.SetActive(true);
+            }
             takeDamageFX.Play();
             OnHealthChanged?.Invoke(currentHealth);
         }

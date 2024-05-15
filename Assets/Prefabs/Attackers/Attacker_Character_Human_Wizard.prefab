@@ -611,8 +611,8 @@ MonoBehaviour:
   detectionRange: 5
   attackDamage: 10
   attackSpeed: 3
-  coolDown: 3
-  creditsOnDeath: 15
+  coolDown: 2
+  creditsOnDeath: 5
 --- !u!114 &-1282815368272235475
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -195,7 +195,7 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         }
     }
 
-    private void Death()
+    public void Death()
     {
         if (deathFX != null)
         {
