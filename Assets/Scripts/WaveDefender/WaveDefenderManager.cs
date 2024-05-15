@@ -20,25 +20,16 @@ public class WaveDefenderManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> enemyPrefabs = new List<GameObject>();
 
-    private bool isWaveActive = false;
-    private bool isWaveComplete = false;
     private bool isGameOver = false;
 
-    // Game Time
-
-    private TimerHandler gameTimer;
-    [SerializeField]
-    private float gameTimeInSeconds = 300f;
-
+    // Events
     public event System.Action<int> OnWaveNumberChanged;
 
     // Player info
 
     private int playerCredits = 100;
-    private int playerCityHealth = 100;
 
     public event System.Action<int> OnPlayerCreditsChanged;
-    public event System.Action<float> OnPlayerCityHealthChanged;
 
     public static WaveDefenderManager Instance { get; private set; }
 
@@ -57,14 +48,15 @@ public class WaveDefenderManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartWave());
-        gameTimer = new TimerHandler(gameTimeInSeconds, TimeUp);
+        GameplayManager.Instance.OnGameOver += () =>
+        {
+            SetGameOver(true);
+        };
     }
 
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(waveCooldown);
-        isWaveActive = true;
-        isWaveComplete = false;
         waveNumber++;
         OnWaveNumberChanged?.Invoke(waveNumber);
         Delay(1, () =>
@@ -83,6 +75,8 @@ public class WaveDefenderManager : MonoBehaviour
 
     private void SpawnAttacker(GameObject attacker)
     {
+        if (isGameOver) return;
+
         if (IsActiveEnemiesLimitReached())
         {
             Debug.Log("Limit reached");
@@ -111,7 +105,6 @@ public class WaveDefenderManager : MonoBehaviour
 
     private bool IsActiveEnemiesLimitReached()
     {
-        Debug.Log(activeEnemies.Count);
         foreach (var enemy in activeEnemies)
         {
             if (enemy.GetAttackerState() == AttackerBehaviour.AttackerStates.Dead)
@@ -134,79 +127,17 @@ public class WaveDefenderManager : MonoBehaviour
         OnPlayerCreditsChanged?.Invoke(playerCredits);
     }
 
-    public void AddCityHealth(int health)
-    {
-        playerCityHealth += health;
-        OnPlayerCityHealthChanged?.Invoke(playerCityHealth);
-    }
-
-    public void RemoveCityHealth(int health)
-    {
-        playerCityHealth -= health;
-        OnPlayerCityHealthChanged?.Invoke(playerCityHealth);
-    }
-
     // Getters and Setters
 
-    public float GetPlayerCityHealth()
+    public void SetGameOver(bool value)
     {
-        return playerCityHealth;
+        isGameOver = value;
     }
 
-    public float GetInitialGameTime()
-    {
-        return gameTimeInSeconds;
-    }
-
-    public float GetGameTime()
-    {
-        return gameTimer.GetTimeLeft();
-    }
     public bool CanAfford(int credits)
     {
         return playerCredits >= credits;
     }
-
-    public bool IsWaveActive()
-    {
-        return isWaveActive;
-    }
-
-    public bool IsWaveComplete()
-    {
-        return isWaveComplete;
-    }
-
-    public bool IsGameOver()
-    {
-        return isGameOver;
-    }
-
-    public void GameOver()
-    {
-        isGameOver = true;
-    }
-
-    public void TimeUp()
-    {
-        isGameOver = true;
-    }
-
-    public void StartNextWave()
-    {
-        StartCoroutine(StartWave());
-    }
-
-    public void SetWaveCooldown(float cooldown)
-    {
-        waveCooldown = cooldown;
-    }
-
-    public void SetWaveNumber(int wave)
-    {
-        waveNumber = wave;
-    }
-
     public void SetPlayerCredits(int credits)
     {
         playerCredits = credits;

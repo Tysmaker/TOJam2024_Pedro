@@ -16,5 +16,6 @@ public class Perk_AttackRange : MonoBehaviour, IPerkable
     public void Execute(TowerStats towerStats)
     {
         towerStats.SetAttackRange(attackRange);
+        towerStats.SetCost(cost);
     }
 }

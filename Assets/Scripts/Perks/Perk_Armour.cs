@@ -16,5 +16,6 @@ public class Perk_Armour : MonoBehaviour, IPerkable
     public void Execute(TowerStats towerStats)
     {
         towerStats.IncreaseArmour(armourIncrease);
+        towerStats.SetCost(cost);
     }
 }

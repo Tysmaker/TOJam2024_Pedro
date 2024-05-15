@@ -16,5 +16,6 @@ public class Perk_Attack : MonoBehaviour, IPerkable
     public void Execute(TowerStats towerStats)
     {
         towerStats.IncreaseAttack(attackIncrease); 
+        towerStats.SetCost(cost);
     }
 }

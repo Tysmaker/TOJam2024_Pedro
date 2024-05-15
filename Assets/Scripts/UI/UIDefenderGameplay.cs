@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,22 +13,41 @@ public class UIDefenderGameplay : MonoBehaviour
     private TextMeshProUGUI playerBaseHealthTMP;
     [SerializeField]
     private Slider playerBaseHealthSlider;
+    [SerializeField]
+    private BaseBehaviour playerBase;    
+    private float time = 0;
 
     private void Start()
     {
-        WaveDefenderManager.Instance.OnPlayerCityHealthChanged += SetPlayerCityHealth;
+        BaseBehaviour.OnHealthChanged += SetPlayerCityHealth;
         
+        time = GameplayManager.Instance.GetInitialGameTime();
+        SetTimer(time);
 
-        SetPlayerCityMaxHealth(WaveDefenderManager.Instance.GetPlayerCityHealth());
-        
-        SetTimer(WaveDefenderManager.Instance.GetInitialGameTime());
+        GameplayManager.Instance.OnGameOver += () =>
+        {
+            gameObject.SetActive(false);
+        };
+        GameplayManager.Instance.OnVictory += () =>
+        {
+            gameObject.SetActive(false);
+        };
+
+
+        SetPlayerCityMaxHealth(playerBase.GetMaxHealth());
+        SetPlayerCityHealth(playerBase.GetCurrentHealth());
     }
 
-    private void SetPlayerCityMaxHealth(float health)
+    public void Update()
+    {
+        UpdateTimer();
+    }
+
+    private void SetPlayerCityMaxHealth(int health)
     {
         playerBaseHealthSlider.maxValue = health;
     }
-    private void SetPlayerCityHealth(float health)
+    private void SetPlayerCityHealth(int health)
     {
         playerBaseHealthSlider.value = health;
         playerBaseHealthTMP.text = health.ToString();
@@ -36,5 +56,11 @@ public class UIDefenderGameplay : MonoBehaviour
     {
         var minutes = Mathf.FloorToInt(timeInSeconds / 60);
         timerTMP.text = string.Format("{0:00}:{1:00}", minutes, timeInSeconds % 60);
+    }
+
+    private void UpdateTimer()
+    {
+        time -= Time.deltaTime;
+        SetTimer(time);
     }
 }
