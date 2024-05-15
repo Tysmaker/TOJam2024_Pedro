@@ -7,11 +7,15 @@ public class BaseBehaviour : MonoBehaviour
     [SerializeField]
     private int MaxHealth = 100;
     private int currentHealth;
+    [SerializeField]
+    private GameObject gateArea;
+    [SerializeField]
+    private float gateArearadius;
 
     // FXs
 
     [SerializeField]
-    private GameObject takeDamageFX;
+    private ParticleSystem takeDamageFX;
     [SerializeField]
     private GameObject healthBelow50FX;
     [SerializeField]
@@ -31,9 +35,25 @@ public class BaseBehaviour : MonoBehaviour
         currentHealth = MaxHealth;
     }
 
-    public void TakeDamage(int damage)
+    private void Update()
     {
-        currentHealth -= damage;
+        var colliders = Physics.OverlapSphere(gateArea.transform.position, gateArearadius, LayerMask.GetMask("Enemy"));
+        foreach (var collider in colliders)
+        {
+            var attacker = collider.GetComponent<AttackerBehaviour>();
+
+            if (attacker != null)
+            {
+                TakeDamage();
+                attacker.GotToEndZone();
+            }
+        }
+    }
+
+    public void TakeDamage()
+    {
+        Debug.Log("Base taking damage");
+        currentHealth -= 1;
         if (currentHealth <= 0)
         {
             Die();
@@ -58,30 +78,7 @@ public class BaseBehaviour : MonoBehaviour
                     healthBelow50FX.SetActive(true);
                 }
             }
-            takeDamageFX.SetActive(true);
-            OnHealthChanged?.Invoke(currentHealth);
-        }
-    }
-
-    public void AddCityHealth(int health)
-    {
-        currentHealth += health;
-        if (currentHealth > MaxHealth)
-        {
-            currentHealth = MaxHealth;
-        }
-        OnHealthChanged?.Invoke(currentHealth);
-    }
-
-    public void RemoveCityHealth(int health)
-    {
-        currentHealth -= health;
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-        else
-        {
+            takeDamageFX.Play();
             OnHealthChanged?.Invoke(currentHealth);
         }
     }
@@ -102,4 +99,9 @@ public class BaseBehaviour : MonoBehaviour
         OnDeath?.Invoke();
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(gateArea.transform.position, gateArearadius);
+    }
 }

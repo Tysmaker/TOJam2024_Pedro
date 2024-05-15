@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ScenePlacingBehaviour : MonoBehaviour
 {
-    public float PlayerCredits { get; private set; } = 500;
+    [SerializeField]
+    private float playerCredits = 500;
     [SerializeField] public TextMeshProUGUI creditsText;
 
     // Temporary Gameplay progression
@@ -42,28 +43,28 @@ public class ScenePlacingBehaviour : MonoBehaviour
 
     public void AddCredits(float credits)
     {
-        PlayerCredits += credits;
+        playerCredits += credits;
         UpdateUI();
     }
 
     public void RemoveCredits(float credits)
     {
-        PlayerCredits -= credits;
+        playerCredits -= credits;
         UpdateUI();
     }
     public void SetCredits(float credits)
     {
-        PlayerCredits = credits;
+        playerCredits = credits;
         UpdateUI();
     }
 
     public bool CanAfford(float credits)
     {
-        return PlayerCredits >= credits;
+        return playerCredits >= credits;
     }
 
     private void UpdateUI()
     {
-        creditsText.text = PlayerCredits.ToString();
+        creditsText.text = playerCredits.ToString();
     }
 }

@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 using static Assets.Scripts.Utils.TweenUtils;
@@ -36,6 +37,10 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     [SerializeField]
     private GameObject deathFX;
 
+    // Events
+
+    public event System.Action OnDeath;
+
     private void Awake()
     {
         if (hasRagdoll)
@@ -65,22 +70,12 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     {
         if (attackerStates == AttackerStates.Dead)
         {
-
             return;
         }
         CheckForTowers();
         CheckStates();
         CheckAttackRange();
     }
-
-    //Just temporary when enemy collides with tower it destroyed the tower
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Tower"))
-    //     {
-    //         Destroy(collision.gameObject);
-    //     }
-    // }
 
     void CheckForTowers()
     {
@@ -199,16 +194,16 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
 
         if (attackerStats.GetHealth() <= 0)
         {
-            OnDeath();
+            Death();
         }
     }
 
-    private void OnDeath()
+    private void Death()
     {
         if (deathFX != null)
         {
             var positionOffset = transform.position + new Vector3(0, 1.5f, 0);
-            Instantiate(deathFX, positionOffset , Quaternion.identity);
+            Instantiate(deathFX, positionOffset, Quaternion.identity);
             attackerStates = AttackerStates.Dead;
         }
         agent.isStopped = true;
@@ -221,8 +216,15 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 rb.isKinematic = false;
             }
         }
-        gameObject.SetActive(false);
-        Destroy(gameObject, 10f);
+        ScenePlacingBehaviour.Instance.AddCredits(attackerStats.GetReward());
+        OnDeath?.Invoke();
+        Destroy(gameObject);
+    }
+
+    public void GotToEndZone()
+    {
+        OnDeath?.Invoke();
+        Destroy(gameObject);
     }
 
     public void SetEndZone(GameObject endZone)
