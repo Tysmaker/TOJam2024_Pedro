@@ -97,6 +97,11 @@ public class WaveDefenderManager : MonoBehaviour
 
         attackerBehavior.SetEndZone(targetArea.gameObject);
 
+        attackerBehavior.OnDeath += () =>
+        {
+            RemoveEnemy(attackerBehavior);
+        };
+
         Delay(spawnCoolDown, () =>
         {
             SpawnAttacker(attacker);
@@ -105,14 +110,12 @@ public class WaveDefenderManager : MonoBehaviour
 
     private bool IsActiveEnemiesLimitReached()
     {
-        foreach (var enemy in activeEnemies)
-        {
-            if (enemy.GetAttackerState() == AttackerBehaviour.AttackerStates.Dead)
-            {
-                activeEnemies.Remove(enemy);
-            }
-        }
         return activeEnemies.Count >= waveEnemiesLimit;
+    }
+
+    public void RemoveEnemy(AttackerBehaviour enemy)
+    {
+        activeEnemies.Remove(enemy);
     }
 
     public void AddCredits(int credits)

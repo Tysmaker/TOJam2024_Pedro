@@ -12,6 +12,7 @@ public class AttackerStats : MonoBehaviour
     [SerializeField] private int attackDamage;
     [SerializeField] private float attackSpeed;
     [SerializeField] private float coolDown;
+    [SerializeField] private int creditsOnDeath;
 
     public event System.Action<int> OnHealthChanged;
 
@@ -56,5 +57,10 @@ public class AttackerStats : MonoBehaviour
     {
         health -= value;
         OnHealthChanged?.Invoke(health);
+    }
+
+    public int GetReward()
+    {
+        return creditsOnDeath;
     }
 }

@@ -3597,6 +3597,7 @@ MonoBehaviour:
   attackDamage: 5
   attackSpeed: 2
   coolDown: 3
+  creditsOnDeath: 15
 --- !u!114 &1300328828377930
 MonoBehaviour:
   m_ObjectHideFlags: 0

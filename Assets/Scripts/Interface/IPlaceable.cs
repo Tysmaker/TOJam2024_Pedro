@@ -9,4 +9,5 @@ public interface IPlaceable
     Renderer ObjectRenderer { get; set; }
     float ObjectRadius { get; set; }
     Collider ObjectCollider { get; set; }
+    GameObject ObjectPreview { get; set; }
 }

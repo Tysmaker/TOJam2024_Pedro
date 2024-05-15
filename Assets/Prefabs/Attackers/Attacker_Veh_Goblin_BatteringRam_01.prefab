@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: -5132150665724371892}
   - component: {fileID: 8362534971602131484}
   - component: {fileID: -2574894006319709234}
-  - component: {fileID: 3941094146126281884}
+  - component: {fileID: 366267713711537013}
   m_Layer: 3
   m_Name: Attacker_Veh_Goblin_BatteringRam_01
   m_TagString: Untagged
@@ -244,6 +244,7 @@ MonoBehaviour:
   attackDamage: 30
   attackSpeed: 4.5
   coolDown: 3
+  creditsOnDeath: 15
 --- !u!114 &8362534971602131484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,8 +292,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &3941094146126281884
-BoxCollider:
+--- !u!136 &366267713711537013
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -309,9 +310,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.3893037, y: 4.930216, z: 7.713928}
-  m_Center: {x: -0.00000051089694, y: 2.7102427, z: 0.5323633}
+  serializedVersion: 2
+  m_Radius: 4.307445
+  m_Height: 4.930216
+  m_Direction: 1
+  m_Center: {x: -0.00000047683713, y: 2.7102427, z: 0.66585916}
 --- !u!1 &160584
 GameObject:
   m_ObjectHideFlags: 0
