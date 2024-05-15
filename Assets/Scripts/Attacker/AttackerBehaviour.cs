@@ -1,8 +1,5 @@
 using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 using static Assets.Scripts.Utils.TweenUtils;
