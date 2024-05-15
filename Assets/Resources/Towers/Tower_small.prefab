@@ -171,6 +171,8 @@ MonoBehaviour:
   objectRenderer: {fileID: 840783576366438599}
   radius: 1
   objectCollider: {fileID: 8026076959440167106}
+  objectPreview: {fileID: 6375795662751712373, guid: d3868708c68a87647bf81f38c5b84861,
+    type: 3}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8

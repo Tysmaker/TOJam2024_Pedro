@@ -13,6 +13,7 @@ public class PlacementManager : MonoBehaviour
     [SerializeField]
     private GameObject objectToPlace;
     private GameObject objectInstance;
+    private GameObject objectPreview;
     private IPlaceable placeable;
     [SerializeField]
     private LayerMask unplaceableLayer;
@@ -68,6 +69,7 @@ public class PlacementManager : MonoBehaviour
 
             if (isOverUI)
             {
+                Debug.Log("Over UI");
                 return;
             }
 
@@ -80,9 +82,9 @@ public class PlacementManager : MonoBehaviour
         }
     }
 
-    public void StartPlacing(GameObject objectToPlace)
+    public void StartPlacing(GameObject objectToAssign)
     {
-        AssignObject(objectToPlace);
+        AssignObject(objectToAssign);
         isManaging = true;
         isPreviewing = true;
         OnStartManaging?.Invoke();
@@ -90,9 +92,11 @@ public class PlacementManager : MonoBehaviour
     public void AssignObject(GameObject objectToAssign)
     {
         objectToPlace = objectToAssign;
-        objectInstance = InstantiatePrefab(objectToPlace, Vector3.zero, name: objectToPlace.name.Replace("(Clone)", ""));
-        placeable = objectInstance.GetComponent<IPlaceable>();
-        objectInstance.SetActive(true);
+        placeable = objectToPlace.GetComponent<IPlaceable>();
+
+        var preview = objectToPlace.GetComponent<IPlaceable>().ObjectPreview;
+        objectPreview = InstantiatePrefab(preview, Vector3.zero, name: objectToPlace.name.Replace("(Clone)", ""));
+        objectPreview.SetActive(true);
     }
 
     public void OnPreview()
@@ -110,24 +114,28 @@ public class PlacementManager : MonoBehaviour
             float snappedZ = Snap(currentPosition.z, snapValue);
 
             var snappedPosition = new Vector3(snappedX, snappedY, snappedZ);
-            objectInstance.transform.position = snappedPosition;
+            objectPreview.transform.position = snappedPosition;
 
             Debug.Log("Snapped position: " + snappedPosition);
 
-            placeable.ObjectCollider.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            var renderer = objectPreview.GetComponentInChildren<Renderer>();
+            while (renderer == null)
+            {
+                renderer = objectPreview.GetComponentInChildren<Renderer>();
+            }
             if (Physics.CheckSphere(snappedPosition, placeable.ObjectRadius, unplaceableLayer))
             {
                 Debug.Log("Invalid");
                 canBePlaced = false;
-                //objectInstance.transform.position = hit.point;
-                placeable.ObjectRenderer.sharedMaterial = previewMaterialInvalid;
+                
+                renderer.sharedMaterial = previewMaterialInvalid;
             }
             else
             {
                 Debug.Log("Valid");
                 canBePlaced = true;
-                //objectInstance.transform.position = hit.point;
-                placeable.ObjectRenderer.sharedMaterial = previewMaterialValid;
+                
+                renderer.sharedMaterial = previewMaterialValid;
             }
         }
     }
@@ -139,9 +147,11 @@ public class PlacementManager : MonoBehaviour
 
     public void OnPlace()
     {
-        ScenePlacingBehaviour.Instance.RemoveCredits(objectInstance.GetComponent<TowerStats>().GetCost());
-        placeable.ObjectCollider.gameObject.layer = LayerMask.NameToLayer("Tower");
-        placeable.ObjectRenderer.sharedMaterial = placeable.DefaultMaterial;
+        ScenePlacingBehaviour.Instance.RemoveCredits(objectToPlace.GetComponent<TowerStats>().GetCost());
+        
+        objectInstance = InstantiatePrefab(objectToPlace, objectPreview.transform.position, objectPreview.transform.rotation);
+        objectInstance.SetActive(true);
+        Destroy(objectPreview);
 
         var costToPlaceAnother = objectInstance.GetComponent<TowerStats>().GetCost();
         if (!ScenePlacingBehaviour.Instance.CanAfford(costToPlaceAnother))
@@ -188,8 +198,10 @@ public class PlacementManager : MonoBehaviour
             Debug.LogError("Object to remove is null");
             return;
         }
-        var objectToRemoveStats = objectToRemove.GetComponent<TowerStats>().GetCost();
-        ScenePlacingBehaviour.Instance.AddCredits(objectToRemoveStats);
+        var objectToRemoveStats = objectToRemove.GetComponent<TowerStats>();
+        float amountToRefund = Mathf.Round(objectToRemoveStats.GetCost() * ((float)objectToRemoveStats.GetHealth() / (float)objectToRemoveStats.GetMaxHealth()));
+        Debug.Log("Refund: " + amountToRefund);
+        ScenePlacingBehaviour.Instance.AddCredits(amountToRefund);
         Destroy(objectToRemove);
         Debug.Log("OnRemove");
     }
@@ -198,7 +210,7 @@ public class PlacementManager : MonoBehaviour
     {
         if (isPreviewing)
         {
-            Destroy(objectInstance);
+            Destroy(objectPreview);
         }
         OnEnd();
         Debug.Log("OnCancel");

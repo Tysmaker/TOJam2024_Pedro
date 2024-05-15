@@ -12,6 +12,8 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     public Renderer ObjectRenderer { get => objectRenderer; set => objectRenderer = value; }
     public float ObjectRadius { get => radius; set => radius = value; }
     public Collider ObjectCollider { get => objectCollider; set => objectCollider = value; }
+    public GameObject ObjectPreview { get => objectPreview; set => objectPreview = value; }
+    
     [SerializeField]
     private Material defaultMaterial;
     [SerializeField]
@@ -20,6 +22,8 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     private float radius;
     [SerializeField]
     private Collider objectCollider;
+    [SerializeField]
+    private GameObject objectPreview;
     private TowerStats towerStats;
     //private AttackerStats attackerStats;
 
