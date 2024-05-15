@@ -16,5 +16,6 @@ public class Perk_Priority : MonoBehaviour, IPerkable
     public void Execute(TowerStats towerStats)
     {
         towerStats.SetPriority(priority);
+        towerStats.SetCost(cost);
     }
 }

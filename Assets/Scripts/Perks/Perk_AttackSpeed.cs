@@ -16,5 +16,6 @@ public class Perk_AttackSpeed : MonoBehaviour, IPerkable
     public void Execute(TowerStats towerStats)
     {
         towerStats.IncreaseAttack(attackSpeedAmount);
+        towerStats.SetCost(cost);
     }
 }
