@@ -54,6 +54,10 @@ public class WaveDefenderManager : MonoBehaviour
         {
             SetGameOver(true);
         };
+        GameplayManager.Instance.OnVictory += () =>
+        {
+            SetGameOver(true);
+        };
     }
 
     private IEnumerator StartWave()
