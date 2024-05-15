@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIPerkSelection : MonoBehaviour
@@ -12,7 +13,7 @@ public class UIPerkSelection : MonoBehaviour
 
     private int perkCount = 0;
     private GameObject currentTower;
-    
+
     // Booleans
     private bool isSelectingPerks = false;
     public bool IsSelectionPhaseComplete { get; private set; } = false;
@@ -21,6 +22,12 @@ public class UIPerkSelection : MonoBehaviour
     // UI Elements
     [SerializeField] private GameObject perkButtonPrefab;
     [SerializeField] private Transform perkButtonContainer;
+
+    // UI Tower info
+    [SerializeField] private TextMeshProUGUI towerName;
+    [SerializeField] private GameObject towerInfoPrefab;
+    private Dictionary<string, string> towerInfo = new Dictionary<string, string>();
+    [SerializeField] private Transform towerInfoContainer;
 
     // Temporary Gameplay progression
 
@@ -42,7 +49,7 @@ public class UIPerkSelection : MonoBehaviour
             if (perk is IPerkable) availableTowerPerks.Add(perk);
         }
         // randomlyChosenPerks = GetRandomPerks();
-        
+
         if (!PlayerTowersManager.IsInitialized)
         {
             PlayerTowersManager.Init(anchor);
@@ -50,7 +57,7 @@ public class UIPerkSelection : MonoBehaviour
     }
 
     private void Start()
-    { 
+    {
         perkCount = 0;
         foreach (var tower in PlayerTowersManager.playerTowers)
         {
@@ -118,6 +125,7 @@ public class UIPerkSelection : MonoBehaviour
     private void CreateUI()
     {
         var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
+        CreateTowerInfoUI();
         foreach (var perk in randomlyChosenPerks)
         {
             var perkButton = Instantiate(perkButtonPrefab, perkButtonContainer);
@@ -125,6 +133,33 @@ public class UIPerkSelection : MonoBehaviour
             uiPerk.UpdateUI(perk.Name, perk.Description, perk.Cost);
             uiPerk.SetButtonAction(() => AddPerk(perk));
         }
+    }
+    private void CreateTowerInfoUI()
+    {
+        // Set Dictionary
+        var towerStats = currentTower.GetComponent<TowerStats>();
+        towerStats.GetTowerInfo(towerInfo);
+
+        towerName.text = towerStats.GetTowerName();
+        foreach (var info in towerInfo)
+        {
+            var towerInfoUI = Instantiate(towerInfoPrefab, towerInfoContainer);
+            var uiTowerInfo = towerInfoUI.GetComponent<UITowerStatsInfo>();
+            uiTowerInfo.SetInfo(info.Key, info.Value);
+        }
+    }
+
+    private void ClearUI()
+    {
+        foreach (Transform child in perkButtonContainer)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in towerInfoContainer)
+        {
+            Destroy(child.gameObject);
+        }
+        towerInfo.Clear();
     }
 
     private void AddPerk(IPerkable perk)
@@ -140,10 +175,7 @@ public class UIPerkSelection : MonoBehaviour
     private void PerkSelected()
     {
         isSelectingPerks = false;
-        foreach (Transform child in perkButtonContainer)
-        {
-            Destroy(child.gameObject);
-        }
+        ClearUI();
         if (perkCount == PlayerTowersManager.playerTowers.Count)
         {
             PerkSelectionComplete();

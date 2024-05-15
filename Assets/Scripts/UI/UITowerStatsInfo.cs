@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class UITowerStatsInfo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private TextMeshProUGUI statsName;
+    [SerializeField]
+    private TextMeshProUGUI stats;
 
-    // Update is called once per frame
-    void Update()
+    public void SetInfo(string name, string stats)
     {
-        
+        statsName.text = name;
+        this.stats.text = stats;
     }
 }

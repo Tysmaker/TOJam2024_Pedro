@@ -13,12 +13,22 @@ public class TowerStats : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private int attackDamage;
     [SerializeField] private float attackSpeed;
-    [SerializeField] private int priority;
+    [SerializeField] private int agro;
     [SerializeField] private float cost;
     [SerializeField] private float coolDown;
 
     public event Action<int> OnHealthChanged;
 
+    public void GetTowerInfo(Dictionary<string, string> towerInfo)
+    {
+        towerInfo.Add("Health", health.ToString());
+        towerInfo.Add("Armour", armour.ToString());
+        towerInfo.Add("Range", range.ToString());
+        towerInfo.Add("Attack Damage", attackDamage.ToString());
+        towerInfo.Add("Attack Speed", attackSpeed.ToString());
+        towerInfo.Add("Agro", agro.ToString());
+        towerInfo.Add("Cost", cost.ToString());
+    }
     public void SetAttackRange(float range)
     {
         this.range += range;
@@ -38,11 +48,11 @@ public class TowerStats : MonoBehaviour
     }
     public void SetPriority(int priority)
     {
-        this.priority += priority;
+        this.agro += priority;
     }
     public int GetPriority()
     {
-        return priority;
+        return agro;
     }
     public float GetCost()
     {
