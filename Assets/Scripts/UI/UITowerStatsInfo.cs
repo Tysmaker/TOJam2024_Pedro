@@ -14,4 +14,10 @@ public class UITowerStatsInfo : MonoBehaviour
         statsName.text = name;
         this.stats.text = stats;
     }
+
+    public void SetTextColour(Color colour)
+    {
+        statsName.color = colour;
+        stats.color = colour;
+    }
 }

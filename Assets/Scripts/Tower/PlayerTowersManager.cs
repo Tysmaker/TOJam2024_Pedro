@@ -38,7 +38,7 @@ public static class PlayerTowersManager
         playerTowers.Remove(tower.name);
     }
 
-    public static void ApplyPerk(IPerkable perk, TowerStats towerStats)
+    public static void ApplyPerk(Perk perk, TowerStats towerStats)
     {
         perk.Execute(towerStats);
     }

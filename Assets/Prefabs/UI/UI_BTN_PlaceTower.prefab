@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 6369876793338874977}
   - component: {fileID: 4456159039050041839}
   - component: {fileID: 2556987033526434530}
+  - component: {fileID: 3591060372088815125}
   m_Layer: 5
   m_Name: UI_BTN_PlaceTower
   m_TagString: Untagged
@@ -821,11 +822,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIPlaceObjectHandler, Assembly-CSharp
-        m_MethodName: StartPlacingObject
-        m_Mode: 2
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2556987033526434530}
-          m_ObjectArgumentAssemblyTypeName: UITowerButtonInfo, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -847,3 +848,20 @@ MonoBehaviour:
   towerName: {fileID: 7103754830366980181}
   towerCost: {fileID: 7741672695751974857}
   cooldownSlider: {fileID: 8681878681423072183}
+--- !u!114 &3591060372088815125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901283424384366502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []

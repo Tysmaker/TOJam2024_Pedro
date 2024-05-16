@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIPerkSelection : MonoBehaviour
 {
 
-    private List<IPerkable> availableTowerPerks = new List<IPerkable>();
-    private List<IPerkable> randomlyChosenPerks = new List<IPerkable>();
+    private List<Perk> availableTowerPerks = new List<Perk>();
+    private List<Perk> randomlyChosenPerks = new List<Perk>();
     [SerializeField]
     private Transform anchor;
 
@@ -27,6 +28,7 @@ public class UIPerkSelection : MonoBehaviour
     [SerializeField] private TextMeshProUGUI towerName;
     [SerializeField] private GameObject towerInfoPrefab;
     private Dictionary<string, string> towerInfo = new Dictionary<string, string>();
+    private Dictionary<string, UITowerStatsInfo> towerInfoInstances = new Dictionary<string, UITowerStatsInfo>();
     [SerializeField] private Transform towerInfoContainer;
 
     // Temporary Gameplay progression
@@ -37,16 +39,17 @@ public class UIPerkSelection : MonoBehaviour
 
     private void Awake()
     {
-        GameObject perkResources = Resources.Load<GameObject>("TowerPerks/Tier01");
-        if (perkResources == null)
+        var perks = Resources.LoadAll<Perk>("TowerPerks/Tier01");
+
+        if (perks == null || perks.Length == 0) 
         {
             Debug.LogError("Perk Resources not found");
             return;
         }
-        var perks = perkResources.GetComponents<IPerkable>();
+        
         foreach (var perk in perks)
         {
-            if (perk is IPerkable) availableTowerPerks.Add(perk);
+            if (perk is Perk) availableTowerPerks.Add(perk);
         }
         // randomlyChosenPerks = GetRandomPerks();
 
@@ -109,10 +112,10 @@ public class UIPerkSelection : MonoBehaviour
     }
 
 
-    private List<IPerkable> GetRandomPerks()
+    private List<Perk> GetRandomPerks()
     {
-        List<IPerkable> randomPerks = new List<IPerkable>();
-        var towerPerks = new List<IPerkable>(availableTowerPerks);
+        List<Perk> randomPerks = new List<Perk>();
+        var towerPerks = new List<Perk>(availableTowerPerks);
         for (int i = 0; i < 3; i++)
         {
             var randomIndex = Random.Range(0, towerPerks.Count);
@@ -130,9 +133,26 @@ public class UIPerkSelection : MonoBehaviour
         {
             var perkButton = Instantiate(perkButtonPrefab, perkButtonContainer);
             var uiPerk = perkButton.GetComponent<UIPerk>();
-            uiPerk.UpdateUI(perk.Name, perk.Description, perk.Cost);
+            
+            var eventTrigger = perkButton.GetComponent<EventTrigger>();
+            if (eventTrigger == null)
+            {
+                eventTrigger = perkButton.AddComponent<EventTrigger>();
+            }
+            AddEventTrigger(perkButton.GetComponent<EventTrigger>(), EventTriggerType.PointerEnter, (data) => PreviewPerkChanges(data, perk));
+            AddEventTrigger(perkButton.GetComponent<EventTrigger>(), EventTriggerType.PointerExit, (data) => SetInitialTowerInfo());
+
+            uiPerk.UpdateUI(perk.GetName(), perk.GetDescription(), perk.GetCost());
             uiPerk.SetButtonAction(() => AddPerk(perk));
         }
+    }
+
+    private void AddEventTrigger(EventTrigger eventTrigger, EventTriggerType triggerType, System.Action<BaseEventData> action)
+    {
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = triggerType;
+        entry.callback.AddListener((data) => action(data));
+        eventTrigger.triggers.Add(entry);
     }
     private void CreateTowerInfoUI()
     {
@@ -146,7 +166,35 @@ public class UIPerkSelection : MonoBehaviour
             var towerInfoUI = Instantiate(towerInfoPrefab, towerInfoContainer);
             var uiTowerInfo = towerInfoUI.GetComponent<UITowerStatsInfo>();
             uiTowerInfo.SetInfo(info.Key, info.Value);
+            towerInfoInstances.Add(info.Key, uiTowerInfo);
         }
+    }
+
+    private void PreviewPerkChanges(BaseEventData data, Perk perk)
+    {        
+        var perkType = perk.GetPerkType();
+        var towerStats = currentTower.GetComponent<TowerStats>();
+        var valueWithPerk = perk.GetValueToIncrease() + towerStats.GetTowerInfo(perkType);
+
+        var costWithPerk = perk.GetCost() + towerStats.GetCost();
+
+        var uiTowerInfo = towerInfoInstances[perkType.ToString()];
+        var uiTowerCost = towerInfoInstances["Cost"];
+
+        uiTowerInfo.SetInfo(perkType.ToString(), valueWithPerk.ToString());     
+        uiTowerInfo.SetTextColour(Color.green);
+
+        uiTowerCost.SetInfo("Cost", costWithPerk.ToString());
+        uiTowerCost.SetTextColour(Color.green);
+    }
+
+    private void SetInitialTowerInfo()
+    {
+        foreach (var info in towerInfoInstances)
+        {
+            info.Value.SetInfo(info.Key, towerInfo[info.Key]);
+            info.Value.SetTextColour(Color.white);
+        } 
     }
 
     private void ClearUI()
@@ -160,14 +208,13 @@ public class UIPerkSelection : MonoBehaviour
             Destroy(child.gameObject);
         }
         towerInfo.Clear();
+        towerInfoInstances.Clear();
     }
 
-    private void AddPerk(IPerkable perk)
+    private void AddPerk(Perk perk)
     {
         perkCount++;
         var towerStats = currentTower.GetComponent<TowerStats>();
-        var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
-        towerPerksHandler.AddPerk(perk);
         PlayerTowersManager.ApplyPerk(perk, towerStats);
         PerkSelected();
     }
