@@ -121,10 +121,6 @@ public class WaveDefenderManager : MonoBehaviour
 
         attackerBehavior.SetEndZone(targetArea.gameObject);
 
-        attackerBehavior.OnDeath += () =>
-        {
-            RemoveEnemy(attackerBehavior);
-        };
         GameplayManager.Instance.OnGameOver += () =>
         {
             attackerBehavior.Death();
@@ -163,6 +159,11 @@ public class WaveDefenderManager : MonoBehaviour
     public void SetGameOver(bool value)
     {
         isGameOver = value;
+    }
+
+    public bool IsGameOver()
+    {
+        return isGameOver;
     }
 
     public bool CanAfford(int credits)

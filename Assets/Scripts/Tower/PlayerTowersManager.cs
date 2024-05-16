@@ -11,6 +11,7 @@ public static class PlayerTowersManager
 
     public static void Init(Transform anchor)
     {
+        IsInitialized = true;
         // Select random towers from Resources to give to player
         List<GameObject> towers = new List<GameObject>(Resources.LoadAll<GameObject>("Towers"));
         if (towers.Count == 0)

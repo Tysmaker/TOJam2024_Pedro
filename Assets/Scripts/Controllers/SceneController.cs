@@ -14,14 +14,14 @@ public class SceneController : MonoBehaviour
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] TMP_Text loadText;
 
-    public void LoadScene()
+    public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(sceneIndex);
     }
 
-    public void FadeInCanvas()
+    public void FadeInCanvas(int sceneIndex)
     {
-        FadeTo(canvasGroup, 1, 0.5f, DelayScreen);
+        FadeTo(canvasGroup, 1, 0.5f, () => DelayScreen(sceneIndex));
         FadeInText();
     }
 
@@ -37,12 +37,12 @@ public class SceneController : MonoBehaviour
         Delay(1f, FadeInText);
     }
 
-    public void DelayScreen()
+    public void DelayScreen(int sceneIndex)
     {
 
         float randomDelay = Random.Range(3f, 5f);
         FadeInText();
-        Delay(randomDelay, LoadScene);
+        Delay(randomDelay, () => LoadScene(sceneIndex));
     }
 
     public void ExitGame()
