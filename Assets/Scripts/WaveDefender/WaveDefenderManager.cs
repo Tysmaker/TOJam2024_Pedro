@@ -121,6 +121,10 @@ public class WaveDefenderManager : MonoBehaviour
 
         attackerBehavior.SetEndZone(targetArea.gameObject);
 
+        attackerBehavior.OnDeath += () =>
+        {
+            RemoveEnemy(attackerBehavior);
+        };
         GameplayManager.Instance.OnGameOver += () =>
         {
             attackerBehavior.Death();
