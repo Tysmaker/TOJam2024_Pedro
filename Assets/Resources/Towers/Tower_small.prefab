@@ -128,7 +128,6 @@ GameObject:
   - component: {fileID: 2133858626658004063}
   - component: {fileID: 5924131889778873676}
   - component: {fileID: 3731016382491116139}
-  - component: {fileID: -4503710891895776383}
   - component: {fileID: 4257094082960137096}
   m_Layer: 0
   m_Name: Tower_small
@@ -197,21 +196,9 @@ MonoBehaviour:
   range: 7
   attackDamage: 10
   attackSpeed: 2
-  priority: 0
+  agro: 0
   cost: 25
   coolDown: 9.8
---- !u!114 &-4503710891895776383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6375795662751712373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c601dbba0a93f44aaf63e007128049c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!208 &4257094082960137096
 NavMeshObstacle:
   m_ObjectHideFlags: 0

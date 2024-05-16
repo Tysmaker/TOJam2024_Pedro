@@ -15,5 +15,5 @@ MonoBehaviour:
   perkType: 2
   perkName: Fast AF BOI!
   description: Tired of those slow ass towers? Well now tower goes zoom zoom!
-  valueToIncrease: 15
+  valueToIncrease: 3
   cost: 65

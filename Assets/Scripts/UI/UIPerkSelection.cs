@@ -127,7 +127,6 @@ public class UIPerkSelection : MonoBehaviour
 
     private void CreateUI()
     {
-        var towerPerksHandler = currentTower.GetComponent<TowerPerksHandler>();
         CreateTowerInfoUI();
         foreach (var perk in randomlyChosenPerks)
         {

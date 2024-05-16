@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4935384544112772923}
   - component: {fileID: 1861715491161022898}
   - component: {fileID: 4744381620740525911}
-  - component: {fileID: 2349144598808221600}
   - component: {fileID: 5091747581451057747}
   m_Layer: 0
   m_Name: Tower_large
@@ -80,21 +79,9 @@ MonoBehaviour:
   range: 4
   attackDamage: 20
   attackSpeed: 3
-  priority: 0
+  agro: 0
   cost: 75
   coolDown: 4.8
---- !u!114 &2349144598808221600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517825056834748707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c601dbba0a93f44aaf63e007128049c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!208 &5091747581451057747
 NavMeshObstacle:
   m_ObjectHideFlags: 0
