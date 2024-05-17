@@ -96,6 +96,11 @@ public class PlacementManager : MonoBehaviour
 
         var preview = objectToPlace.GetComponent<IPlaceable>().ObjectPreview;
         objectPreview = InstantiatePrefab(preview, Vector3.zero, name: objectToPlace.name.Replace("(Clone)", ""));
+
+        // Tower range line
+        var towerRangeLine = objectPreview.GetComponentInChildren<TowerRangeLineHandler>();
+        towerRangeLine.SetTowerStats(objectToPlace.GetComponent<TowerStats>());
+
         objectPreview.SetActive(true);
     }
 
@@ -127,14 +132,14 @@ public class PlacementManager : MonoBehaviour
             {
                 Debug.Log("Invalid");
                 canBePlaced = false;
-                
+
                 renderer.sharedMaterial = previewMaterialInvalid;
             }
             else
             {
                 Debug.Log("Valid");
                 canBePlaced = true;
-                
+
                 renderer.sharedMaterial = previewMaterialValid;
             }
         }
@@ -148,7 +153,7 @@ public class PlacementManager : MonoBehaviour
     public void OnPlace()
     {
         ScenePlacingBehaviour.Instance.RemoveCredits(objectToPlace.GetComponent<TowerStats>().GetCost());
-        
+
         objectInstance = InstantiatePrefab(objectToPlace, objectPreview.transform.position, objectPreview.transform.rotation);
         objectInstance.SetActive(true);
         Destroy(objectPreview);

@@ -86,7 +86,6 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
     private void Update()
     {
         CheckForEnemiesInRange();
-        UpdateTowerRangeLine();
 
         if (enemyInRange == null) return;
         //LookAt(transform, enemyInRange.transform, 0, ease: Ease.Linear);
@@ -118,15 +117,6 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
         }
         OrderEnemiesInRange();
     }
-
-    private void UpdateTowerRangeLine()
-    {
-        float xScale = towerStats.GetAttackRange() / 5;
-        float zScale = towerStats.GetAttackRange() / 5;
-
-        towerRangeLine.transform.localScale = new Vector3(xScale,0, zScale);
-    }
-
     private void OnDeath()
     {
         if (deathFX != null)

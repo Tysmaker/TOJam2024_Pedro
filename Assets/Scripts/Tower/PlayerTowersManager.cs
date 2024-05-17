@@ -24,8 +24,11 @@ public static class PlayerTowersManager
             var randomIndex = Random.Range(0, towers.Count);
             var tower = InstantiatePrefab(towers[randomIndex], anchor.position);
             var towerBehaviour = tower.GetComponent<TowerBehavior>();
-            towerBehaviour.SetPersistent();
-            AddTower(tower.GetComponent<TowerStats>());
+            var towerStats = tower.GetComponent<TowerStats>();
+
+            towerBehaviour.SetPersistent();          
+            AddTower(towerStats);
+
             towers.RemoveAt(randomIndex);
         }
     }
