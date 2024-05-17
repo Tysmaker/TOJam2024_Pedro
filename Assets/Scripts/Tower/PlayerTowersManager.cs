@@ -58,4 +58,13 @@ public static class PlayerTowersManager
         }
         return null;
     }
+    public static void DisposeOfTowers()
+    {
+        foreach (var tower in playerTowers)
+        {
+            GameObject.Destroy(tower.Value.gameObject);
+        }
+        playerTowers.Clear();
+        IsInitialized = false;
+    }
 }

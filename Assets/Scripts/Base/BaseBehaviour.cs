@@ -45,7 +45,7 @@ public class BaseBehaviour : MonoBehaviour
             if (attacker != null)
             {
                 TakeDamage();
-                attacker.GotToEndZone();
+                attacker.Death();
             }
         }
     }
@@ -54,6 +54,7 @@ public class BaseBehaviour : MonoBehaviour
     {
         Debug.Log("Base taking damage");
         currentHealth -= 1;
+        OnHealthChanged?.Invoke(currentHealth);
         if (currentHealth <= 0)
         {
             Die();
@@ -83,7 +84,7 @@ public class BaseBehaviour : MonoBehaviour
                 takeDamageFX.gameObject.SetActive(true);
             }
             takeDamageFX.Play();
-            OnHealthChanged?.Invoke(currentHealth);
+            
         }
     }
 

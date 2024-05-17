@@ -9,12 +9,6 @@ public class GameplayManager : MonoBehaviour
     private int gameTimeInSeconds = 300;
     private Coroutine gameTimer;
 
-
-    [SerializeField]
-    private GameObject gameOverScreen;
-    [SerializeField]
-    private GameObject victoryScreen;
-
     // Events
 
     public event System.Action OnGameOver;
@@ -57,17 +51,15 @@ public class GameplayManager : MonoBehaviour
 
     private void Victory()
     {
-        victoryScreen.SetActive(true);
-
         OnVictory?.Invoke();
         Debug.Log("Victory");
     }
 
     private void GameOver()
     {
-        gameOverScreen.SetActive(true);
         OnGameOver?.Invoke();
         StopCoroutine(gameTimer);  
+        Destroy(_instance);
 
         Debug.Log("Game Over");
     }
@@ -75,5 +67,10 @@ public class GameplayManager : MonoBehaviour
     public int GetInitialGameTime()
     {
         return gameTimeInSeconds;
+    }
+
+    private void OnDestroy()
+    {
+        BaseBehaviour.OnDeath -= GameOver;
     }
 }

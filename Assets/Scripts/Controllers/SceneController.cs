@@ -19,6 +19,12 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void FreshLoadScene(int sceneIndex)
+    {
+        PlayerTowersManager.DisposeOfTowers();
+        SceneManager.LoadScene(sceneIndex);
+    }
+
     public void FadeInCanvas(int sceneIndex)
     {
         FadeTo(canvasGroup, 1, 0.5f, () => DelayScreen(sceneIndex));

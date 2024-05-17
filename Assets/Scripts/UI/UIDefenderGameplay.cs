@@ -14,24 +14,18 @@ public class UIDefenderGameplay : MonoBehaviour
     [SerializeField]
     private Slider playerBaseHealthSlider;
     [SerializeField]
-    private BaseBehaviour playerBase;    
+    private BaseBehaviour playerBase;
     private float time = 0;
 
     private void Start()
     {
         BaseBehaviour.OnHealthChanged += SetPlayerCityHealth;
-        
+
         time = GameplayManager.Instance.GetInitialGameTime();
         SetTimer(time);
 
-        GameplayManager.Instance.OnGameOver += () =>
-        {
-            gameObject.SetActive(false);
-        };
-        GameplayManager.Instance.OnVictory += () =>
-        {
-            gameObject.SetActive(false);
-        };
+        GameplayManager.Instance.OnGameOver += SetInactive;
+        GameplayManager.Instance.OnVictory += SetInactive;
 
 
         SetPlayerCityMaxHealth(playerBase.GetMaxHealth());
@@ -62,5 +56,17 @@ public class UIDefenderGameplay : MonoBehaviour
     {
         time -= Time.deltaTime;
         SetTimer(time);
+    }
+
+    private void SetInactive()
+    {
+        gameObject.SetActive(false);
+    }
+
+
+    private void OnDisable()
+    {
+        GameplayManager.Instance.OnGameOver -= SetInactive;
+        GameplayManager.Instance.OnVictory -= SetInactive;
     }
 }

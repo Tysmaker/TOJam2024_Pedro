@@ -125,10 +125,10 @@ public class WaveDefenderManager : MonoBehaviour
         {
             RemoveEnemy(attackerBehavior);
         };
-        GameplayManager.Instance.OnGameOver += () =>
-        {
-            attackerBehavior.Death();
-        };
+        // GameplayManager.Instance.OnGameOver += () =>
+        // {
+        //     attackerBehavior.Death();
+        // };
 
         Delay(spawnCoolDown, () =>
         {
