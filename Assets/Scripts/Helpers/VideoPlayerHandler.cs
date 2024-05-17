@@ -9,12 +9,11 @@ public class VideoPlayerHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayVideo();
+        FetchVideo();
     }
-    private void PlayVideo()
+    private void FetchVideo()
     {
         string path = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
         videoPlayer.url = path;
-        videoPlayer.Play();
     }
 }
