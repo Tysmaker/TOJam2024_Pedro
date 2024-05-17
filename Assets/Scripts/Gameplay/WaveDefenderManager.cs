@@ -27,12 +27,7 @@ public class WaveDefenderManager : MonoBehaviour
     // Events
     public event System.Action<int> OnWaveNumberChanged;
 
-    // Player info
-
-    private int playerCredits = 100;
-
-    public event System.Action<int> OnPlayerCreditsChanged;
-
+    // Singleton
     public static WaveDefenderManager Instance { get; private set; }
 
     private void Awake()
@@ -125,10 +120,6 @@ public class WaveDefenderManager : MonoBehaviour
         {
             RemoveEnemy(attackerBehavior);
         };
-        // GameplayManager.Instance.OnGameOver += () =>
-        // {
-        //     attackerBehavior.Death();
-        // };
 
         Delay(spawnCoolDown, () =>
         {
@@ -146,18 +137,6 @@ public class WaveDefenderManager : MonoBehaviour
         activeEnemies.Remove(enemy);
     }
 
-    public void AddCredits(int credits)
-    {
-        playerCredits += credits;
-        OnPlayerCreditsChanged?.Invoke(playerCredits);
-    }
-
-    public void RemoveCredits(int credits)
-    {
-        playerCredits -= credits;
-        OnPlayerCreditsChanged?.Invoke(playerCredits);
-    }
-
     // Getters and Setters
 
     public void SetGameOver(bool value)
@@ -168,14 +147,5 @@ public class WaveDefenderManager : MonoBehaviour
     public bool IsGameOver()
     {
         return isGameOver;
-    }
-
-    public bool CanAfford(int credits)
-    {
-        return playerCredits >= credits;
-    }
-    public void SetPlayerCredits(int credits)
-    {
-        playerCredits = credits;
     }
 }
