@@ -33,10 +33,9 @@ public class TowerStats : MonoBehaviour
     public void GetTowerInfo(Dictionary<string, string> towerInfo)
     {
         towerInfo.Add(PerkTypes.Health.ToString(), health.ToString());
-        towerInfo.Add(PerkTypes.Armour.ToString(), armour.ToString());
         towerInfo.Add(PerkTypes.Range.ToString(), range.ToString());
         towerInfo.Add(PerkTypes.Attack.ToString(), attackDamage.ToString());
-        towerInfo.Add(PerkTypes.AttackSpeed.ToString(), attackSpeed.ToString());
+        towerInfo.Add(PerkTypes.AttackSpeed.ToString(), attackSpeed.ToString("N2") + " s/atk");
         towerInfo.Add(PerkTypes.Agro.ToString(), agro.ToString());
         towerInfo.Add(PerkTypes.Cooldown.ToString(), coolDown.ToString());
         towerInfo.Add("Cost", cost.ToString());

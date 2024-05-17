@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb310e67fd787764384cc78b32b5fae5, type: 3}
-  m_Name: ArmourIncrease
+  m_Name: HealthIncrease
   m_EditorClassIdentifier: 
-  perkType: 0
+  perkType: 5
   perkName: Extra beefy!
   description: Problems with losing your tower? Well no more!
-  valueToIncrease: 50
+  valueToIncrease: 65
   cost: 50

@@ -41,12 +41,12 @@ public class UIPerkSelection : MonoBehaviour
     {
         var perks = Resources.LoadAll<Perk>("TowerPerks/Tier01");
 
-        if (perks == null || perks.Length == 0) 
+        if (perks == null || perks.Length == 0)
         {
             Debug.LogError("Perk Resources not found");
             return;
         }
-        
+
         foreach (var perk in perks)
         {
             if (perk is Perk) availableTowerPerks.Add(perk);
@@ -132,7 +132,7 @@ public class UIPerkSelection : MonoBehaviour
         {
             var perkButton = Instantiate(perkButtonPrefab, perkButtonContainer);
             var uiPerk = perkButton.GetComponent<UIPerk>();
-            
+
             var eventTrigger = perkButton.GetComponent<EventTrigger>();
             if (eventTrigger == null)
             {
@@ -170,17 +170,32 @@ public class UIPerkSelection : MonoBehaviour
     }
 
     private void PreviewPerkChanges(BaseEventData data, Perk perk)
-    {        
+    {
+
+        // Get the perk type and tower stats
         var perkType = perk.GetPerkType();
         var towerStats = currentTower.GetComponent<TowerStats>();
-        var valueWithPerk = perk.GetValueToIncrease() + towerStats.GetTowerInfo(perkType);
+        float valueWithPerk;
+        string valueString;
 
+        if (perkType == TowerStats.PerkTypes.AttackSpeed)
+        {
+            valueWithPerk = towerStats.GetTowerInfo(perkType) / perk.GetValueToIncrease();
+            valueString = valueWithPerk.ToString("N2") + " s/atk";
+        }
+        else
+        {
+            valueWithPerk = perk.GetValueToIncrease() + towerStats.GetTowerInfo(perkType);
+            valueString = valueWithPerk.ToString();
+        }
+
+        // Calculate the cost with the perk and retrieve the UI elements
         var costWithPerk = perk.GetCost() + towerStats.GetCost();
-
         var uiTowerInfo = towerInfoInstances[perkType.ToString()];
         var uiTowerCost = towerInfoInstances["Cost"];
 
-        uiTowerInfo.SetInfo(perkType.ToString(), valueWithPerk.ToString());     
+        // Set the UI elements
+        uiTowerInfo.SetInfo(perkType.ToString(), valueString);
         uiTowerInfo.SetTextColour(Color.green);
 
         uiTowerCost.SetInfo("Cost", costWithPerk.ToString());
@@ -193,7 +208,7 @@ public class UIPerkSelection : MonoBehaviour
         {
             info.Value.SetInfo(info.Key, towerInfo[info.Key]);
             info.Value.SetTextColour(Color.white);
-        } 
+        }
     }
 
     private void ClearUI()
