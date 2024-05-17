@@ -64,7 +64,7 @@ public class TowerBehavior : MonoBehaviour, IPlaceable, IDamageable
 
     public void TakeDamage(int damage)
     {
-        towerStats.SetHealth(damage);
+        towerStats.DecreaseHealth(damage);
 
         if(towerStats.GetHealth() <= 0 ) 
         { 

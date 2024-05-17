@@ -112,8 +112,8 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
 
     private void SortTowers()
     {
-        // Sort towers by priority
-        towersInRange.Sort((x, y) => x.GetPriority().CompareTo(y.GetPriority()));
+        // Sort towers by priority highest to lowest
+        towersInRange.Sort((x, y) => y.GetPriority().CompareTo(x.GetPriority()));
     }
 
 

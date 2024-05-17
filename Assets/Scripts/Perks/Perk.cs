@@ -34,6 +34,7 @@ public class Perk : ScriptableObject
                 break;
             case TowerStats.PerkTypes.Health:
                 towerStats.IncreaseMaxHealth(valueToIncrease);
+                towerStats.SetCurrentHealth(towerStats.GetMaxHealth());
                 break;
             case TowerStats.PerkTypes.Cooldown:
                 towerStats.IncreaseAttackSpeed(valueToIncrease);

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perkType: 4
   perkName: The Goat!
-  description: 100% is not gonna attract attention!
+  description: 100% is not gonna attract attention! <i> But it will.. </i>
   valueToIncrease: 5
   cost: 5

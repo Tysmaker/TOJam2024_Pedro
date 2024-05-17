@@ -46,7 +46,7 @@ public class TowerStats : MonoBehaviour
         switch (perkType)
         {
             case PerkTypes.Health:
-                return health;
+                return maxHealth;
             case PerkTypes.Armour:
                 return armour;
             case PerkTypes.Range:
@@ -78,6 +78,17 @@ public class TowerStats : MonoBehaviour
     public void IncreaseMaxHealth(int value)
     {
         this.maxHealth += value;
+    }
+
+    public void SetCurrentHealth(int value)
+    {
+        this.health = value;
+    }
+    
+    public void DecreaseHealth(int value)
+    {
+        health -= value;
+        OnHealthChanged?.Invoke(health);
     }
     public void IncreaseAttack(int attackAmount)
     {
@@ -136,11 +147,6 @@ public class TowerStats : MonoBehaviour
         return attackSpeed;
     }
 
-    public void SetHealth(int value)
-    {
-        health -= value;
-        OnHealthChanged?.Invoke(health);
-    }
     public float GetCooldown()
     {
         return coolDown;
