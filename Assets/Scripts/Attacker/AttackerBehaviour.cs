@@ -67,7 +67,12 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
             return;
         }
 
-        if(WaveDefenderManager.Instance.IsGameOver() && WaveDefenderManager.Instance != null) Death();
+        if (WaveDefenderManager.Instance == null) 
+        {
+            // Attacker side Gameplay
+        }
+        else if (WaveDefenderManager.Instance.IsGameOver() && WaveDefenderManager.Instance != null) Death();
+
         CheckForTowers();
         CheckStates();
         CheckAttackRange();

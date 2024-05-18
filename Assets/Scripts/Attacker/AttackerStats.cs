@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackerStats : MonoBehaviour
 {
+    [SerializeField] private string attackerName;
     [SerializeField] private int maxHealth;
     [SerializeField] private int health;
     [SerializeField] private int armour;
@@ -13,10 +14,14 @@ public class AttackerStats : MonoBehaviour
     [SerializeField] private float attackSpeed;
     [SerializeField] private float cooldown;
     [SerializeField] private int creditsOnDeath;
+    [SerializeField] private int amountSpawnAtOnce;
 
     public event System.Action<int> OnHealthChanged;
 
-
+    public string GetName()
+    {
+        return attackerName;
+    }
 
     public int GetAttackDamage()
     {
@@ -62,5 +67,10 @@ public class AttackerStats : MonoBehaviour
     public int GetReward()
     {
         return creditsOnDeath;
+    }
+
+    public int GetAmountSpawnAtOnce()
+    {
+        return amountSpawnAtOnce;
     }
 }

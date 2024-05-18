@@ -105,7 +105,7 @@ public class AreaStrike : MonoBehaviour
     private IEnumerator DoCooldown()
     {
         currentTime = cooldown;
-        cooldownSlider.DOValue(0, cooldown);
+        cooldownSlider.DOValue(0, cooldown).SetEase(Ease.Linear);
         while (currentTime > 0)
         {
             currentTime -= Time.deltaTime;

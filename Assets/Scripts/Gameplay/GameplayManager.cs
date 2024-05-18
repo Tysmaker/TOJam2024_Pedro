@@ -8,6 +8,7 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private int gameTimeInSeconds = 300;
     private Coroutine gameTimer;
+    private bool isPlayerDefending = false;
 
     // Events
 
@@ -31,15 +32,22 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void IsPlayerDefending(bool isDefending)
     {
-        // Subscribe to events
-        BaseBehaviour.OnDeath += GameOver;
+        isPlayerDefending = isDefending;
     }
 
     public void StartGame()
     {
         Debug.Log("Game Started");
+        if (isPlayerDefending)
+        {
+            BaseBehaviour.OnDeath += GameOver;
+        }
+        else
+        {
+            BaseBehaviour.OnDeath += Victory;
+        }
         gameTimer = StartCoroutine(GameTimer());
     }
 
@@ -72,5 +80,6 @@ public class GameplayManager : MonoBehaviour
     private void OnDestroy()
     {
         BaseBehaviour.OnDeath -= GameOver;
+        BaseBehaviour.OnDeath -= Victory;
     }
 }

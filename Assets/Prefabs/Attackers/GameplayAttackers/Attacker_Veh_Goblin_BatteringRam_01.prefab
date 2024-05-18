@@ -244,7 +244,7 @@ MonoBehaviour:
   detectionRange: 3
   attackDamage: 30
   attackSpeed: 4.5
-  cooldown: 3
+  cooldown: 5
   creditsOnDeath: 10
   amountSpawnAtOnce: 1
 --- !u!114 &8362534971602131484

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -26,13 +27,14 @@ public class AttackerManager : MonoBehaviour
     [SerializeField]
     private Material previewMaterialValid;
     [SerializeField]
-    private Material previewMaterialInvalid; 
+    private Material previewMaterialInvalid;
     private bool isPreviewing = false;
     private bool isValid = false;
 
     // UI Elements
     [SerializeField]
     private List<Button> attackerButtons = new List<Button>();
+    private Button activeButton;
 
 
     // Events
@@ -72,10 +74,19 @@ public class AttackerManager : MonoBehaviour
 
     private void StartPlacingEnemy(int index)
     {
-        isPreviewing = true;   
+        if (isPreviewing) 
+        {
+            Destroy(currentPreview);
+        }
+        isPreviewing = true;
         objectToPlace = enemyPrefabs[index];
-        SetButtonInteractable(false);
+        //SetButtonInteractable(false);
         currentPreview = Instantiate(objectPreview);
+    }
+
+    private void SetActiveButton(Button button)
+    {
+        activeButton = button;
     }
 
     private void Preview()
@@ -93,7 +104,7 @@ public class AttackerManager : MonoBehaviour
         {
             isValid = false;
             currentPreview.GetComponent<MeshRenderer>().material = previewMaterialInvalid;
-        }        
+        }
     }
 
     private void SetButtons()
@@ -102,10 +113,14 @@ public class AttackerManager : MonoBehaviour
         {
             int index = i;
             var uiPlaceButtons = attackerButtons[i].GetComponent<UIAttackerPlaceButton>();
+            var buttonTMP = attackerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            var attackerStats = enemyPrefabs[i].GetComponent<AttackerStats>();
 
-            uiPlaceButtons.SetAttackerStats(enemyPrefabs[i].GetComponent<AttackerStats>());
-            
+            uiPlaceButtons.SetAttackerStats(attackerStats);
+            buttonTMP.text = attackerStats.GetName();
+
             attackerButtons[i].onClick.AddListener(() => StartPlacingEnemy(index));
+            attackerButtons[i].onClick.AddListener(() => SetActiveButton(attackerButtons[index]));
         }
     }
 
@@ -119,15 +134,21 @@ public class AttackerManager : MonoBehaviour
 
     private void PlaceAttacker()
     {
-        var instance = Instantiate(objectToPlace, currentPreview.transform.position, Quaternion.AngleAxis(180, Vector3.up));
-        var attacker = instance.GetComponent<AttackerBehaviour>();
+        var attackerStats = objectToPlace.GetComponent<AttackerStats>();
 
-        instance.SetActive(true);
-        attacker.SetEndZone(targetArea.gameObject);
-        
+        // Instantiate the attacker based on the amount spawn at once
+        for (int i = 0; i < attackerStats.GetAmountSpawnAtOnce(); i++)
+        {
+            var instance = Instantiate(objectToPlace, currentPreview.transform.position, Quaternion.AngleAxis(180, Vector3.up));
+            var attacker = instance.GetComponent<AttackerBehaviour>();
+
+            instance.SetActive(true);
+            attacker.SetEndZone(targetArea.gameObject);
+            AddEnemyToQueue(attacker.gameObject);
+        }
+
         Destroy(currentPreview);
-        AddEnemyToQueue(objectToPlace);  
-        PlacementEnded();      
+        PlacementEnded();
     }
 
     private void AddEnemyToQueue(GameObject enemyPrefab)
@@ -138,6 +159,8 @@ public class AttackerManager : MonoBehaviour
     private void PlacementEnded()
     {
         isPreviewing = false;
-        SetButtonInteractable(true);
+        //SetButtonInteractable(true);
+        var uiPlaceButton = activeButton.GetComponent<UIAttackerPlaceButton>();
+        uiPlaceButton.StartCooldown();
     }
 }

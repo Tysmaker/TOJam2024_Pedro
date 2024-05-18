@@ -49,6 +49,7 @@ public class UIAttackerPlaceButton : MonoBehaviour
     public void StartCooldownSlider(float value)
     {
         cooldownSlider.maxValue = value;
+        cooldownSlider.value = value;
         cooldownSlider.DOValue(0, value).SetEase(Ease.Linear);
     }
 }

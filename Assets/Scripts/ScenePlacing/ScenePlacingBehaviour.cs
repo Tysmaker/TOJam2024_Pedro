@@ -11,8 +11,10 @@ public class ScenePlacingBehaviour : MonoBehaviour
 
     // Temporary Gameplay progression
 
-    [SerializeField] private GameObject nextPhase;	
+    [SerializeField] private GameObject defenderGameplay;	
+    [SerializeField] private GameObject attackerGameplay;
     [SerializeField] private GameObject thisPhase;
+    [SerializeField] private GameObject placingTowersPhase;
 
     // Singleton
     public static ScenePlacingBehaviour Instance { get; private set; }
@@ -38,7 +40,20 @@ public class ScenePlacingBehaviour : MonoBehaviour
     {
         // Start the game through the Defender Gameplay Manager
         thisPhase.SetActive(false);
-        nextPhase.SetActive(true);
+        var chance = Random.Range(0, 2);
+        if (chance == 0)
+        {
+            attackerGameplay.SetActive(true);
+            placingTowersPhase.SetActive(false);
+            GameplayManager.Instance.IsPlayerDefending(false);
+            GameplayManager.Instance.StartGame();
+        }
+        else
+        {
+            defenderGameplay.SetActive(true);
+            GameplayManager.Instance.IsPlayerDefending(true);
+            GameplayManager.Instance.StartGame();
+        }
     }
 
     public void AddCredits(float credits)

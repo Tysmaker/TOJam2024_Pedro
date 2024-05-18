@@ -4723,6 +4723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081b2133103348344b8af30073697de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackerName: Big Bad Goblin
   maxHealth: 75
   health: 75
   armour: 10
@@ -4730,8 +4731,9 @@ MonoBehaviour:
   detectionRange: 3
   attackDamage: 15
   attackSpeed: 3.5
-  coolDown: 8
+  cooldown: 5
   creditsOnDeath: 50
+  amountSpawnAtOnce: 1
 --- !u!114 &-5715600220122933006
 MonoBehaviour:
   m_ObjectHideFlags: 0
