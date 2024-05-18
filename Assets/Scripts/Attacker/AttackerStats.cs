@@ -11,7 +11,7 @@ public class AttackerStats : MonoBehaviour
     public float detectionRange;
     [SerializeField] private int attackDamage;
     [SerializeField] private float attackSpeed;
-    [SerializeField] private float coolDown;
+    [SerializeField] private float cooldown;
     [SerializeField] private int creditsOnDeath;
 
     public event System.Action<int> OnHealthChanged;
@@ -43,9 +43,9 @@ public class AttackerStats : MonoBehaviour
         return attackSpeed;
     }
 
-    public float GetSpawnCoolDown()
+    public float GetSpawnCooldown()
     {
-        return coolDown;
+        return cooldown;
     }    
 
     public float GetAttackRange()

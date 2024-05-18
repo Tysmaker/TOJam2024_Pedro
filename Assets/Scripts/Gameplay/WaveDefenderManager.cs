@@ -107,7 +107,7 @@ public class WaveDefenderManager : MonoBehaviour
 
         var attackerInstance = Instantiate(attackerToSpawn, randomPositionInsideSpawnArea, Quaternion.AngleAxis(180, Vector3.up));
         var attackerStats = attackerInstance.GetComponent<AttackerStats>();
-        var spawnCoolDown = attackerStats.GetSpawnCoolDown();
+        var spawnCoolDown = attackerStats.GetSpawnCooldown();
         var attackerBehavior = attackerInstance.GetComponent<AttackerBehaviour>();
 
         spawnQueue.RemoveAt(0);

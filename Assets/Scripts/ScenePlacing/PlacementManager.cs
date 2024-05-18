@@ -60,7 +60,7 @@ public class PlacementManager : MonoBehaviour
         }
         if (isPreviewing)
         {
-            OnPreview();
+            Preview();
         }
 
         if (Input.GetMouseButtonDown(0) && canBePlaced)
@@ -104,7 +104,7 @@ public class PlacementManager : MonoBehaviour
         objectPreview.SetActive(true);
     }
 
-    public void OnPreview()
+    public void Preview()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;

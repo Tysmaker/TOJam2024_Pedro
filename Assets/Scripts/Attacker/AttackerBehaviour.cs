@@ -17,10 +17,8 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
     [SerializeField] private LayerMask towerLayer;
 
     private NavMeshAgent agent;
-    private Rigidbody rb;
     private GameObject tower;
     private AttackerStats attackerStats;
-    private TowerStats towerStats;
     [SerializeField]
     AttackerStates attackerStates;
     [SerializeField]
@@ -48,7 +46,6 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
                 rb.isKinematic = true;
             }
         }
-        rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         attackerStats = GetComponent<AttackerStats>();
         animator = GetComponent<Animator>();
@@ -69,7 +66,8 @@ public class AttackerBehaviour : MonoBehaviour, IDamageable
         {
             return;
         }
-        if(WaveDefenderManager.Instance.IsGameOver()) Death();
+
+        if(WaveDefenderManager.Instance.IsGameOver() && WaveDefenderManager.Instance != null) Death();
         CheckForTowers();
         CheckStates();
         CheckAttackRange();
