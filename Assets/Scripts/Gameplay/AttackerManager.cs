@@ -9,13 +9,11 @@ using UnityEngine.UI;
 public class AttackerManager : MonoBehaviour
 {
     private List<AttackerBehaviour> activeEnemies = new List<AttackerBehaviour>();
-    private List<GameObject> spawnQueue = new List<GameObject>();
+    private List<GameObject> spawnedEnemies = new List<GameObject>();
     [SerializeField]
     private Transform targetArea;
     [SerializeField]
     private List<GameObject> enemyPrefabs = new List<GameObject>();
-
-    private bool isGameOver = false;
 
     // Placement
     [SerializeField]
@@ -28,12 +26,17 @@ public class AttackerManager : MonoBehaviour
     private Material previewMaterialValid;
     [SerializeField]
     private Material previewMaterialInvalid;
+    [SerializeField]
+    private int maxEnemies = 10;
     private bool isPreviewing = false;
     private bool isValid = false;
+
 
     // UI Elements
     [SerializeField]
     private List<Button> attackerButtons = new List<Button>();
+    [SerializeField]
+    private TextMeshProUGUI spawnAmountText;
     private Button activeButton;
 
 
@@ -57,7 +60,20 @@ public class AttackerManager : MonoBehaviour
 
     private void Update()
     {
+        spawnAmountText.text = spawnedEnemies.Count + "/" + maxEnemies;
+
+        if (spawnedEnemies.Count >= maxEnemies)
+        {
+            spawnAmountText.color = Color.red;
+            return;
+        }
+        else
+        {
+            spawnAmountText.color = Color.white;
+        }
+
         if (!isPreviewing) return;
+
 
         Preview();
 
@@ -74,13 +90,17 @@ public class AttackerManager : MonoBehaviour
 
     private void StartPlacingEnemy(int index)
     {
-        if (isPreviewing) 
+        if (spawnedEnemies.Count >= maxEnemies)
+        {
+            return;
+        }
+        
+        if (isPreviewing)
         {
             Destroy(currentPreview);
         }
         isPreviewing = true;
         objectToPlace = enemyPrefabs[index];
-        //SetButtonInteractable(false);
         currentPreview = Instantiate(objectPreview);
     }
 
@@ -144,16 +164,22 @@ public class AttackerManager : MonoBehaviour
 
             instance.SetActive(true);
             attacker.SetEndZone(targetArea.gameObject);
-            AddEnemyToQueue(attacker.gameObject);
+            AddToSpawnedList(attacker.gameObject);
+            attacker.OnDeath += () => RemoveFromSpawnedList(attacker.gameObject);
         }
 
         Destroy(currentPreview);
         PlacementEnded();
     }
 
-    private void AddEnemyToQueue(GameObject enemyPrefab)
+    private void AddToSpawnedList(GameObject enemyPrefab)
     {
-        spawnQueue.Add(enemyPrefab);
+        spawnedEnemies.Add(enemyPrefab);
+    }
+
+    public void RemoveFromSpawnedList(GameObject enemyPrefab)
+    {
+        spawnedEnemies.Remove(enemyPrefab);
     }
 
     private void PlacementEnded()

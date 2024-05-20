@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using CartoonFX;
+using UnityEngine.EventSystems;
 
 public class AreaStrike : MonoBehaviour
 {
@@ -30,7 +31,12 @@ public class AreaStrike : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && isPreviewing)
+        // Check if not over UI
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isPreviewing )
         {
             isActive = true;
         }

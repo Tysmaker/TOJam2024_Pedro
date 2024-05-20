@@ -4699,7 +4699,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
+  m_Speed: 1.25
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -4724,12 +4724,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackerName: Big Bad Goblin
-  maxHealth: 75
-  health: 75
+  maxHealth: 400
+  health: 400
   armour: 10
-  attackRange: 1.5
-  detectionRange: 3
-  attackDamage: 15
+  attackRange: 2
+  detectionRange: 5
+  attackDamage: 20
   attackSpeed: 3.5
   cooldown: 8
   creditsOnDeath: 50
